@@ -67,12 +67,7 @@ extension ZLayoutAnchorable {
     public mutating func anchorInCenter(padding: CGPoint = CGPoint.zero,
                                         width: CGFloat? = nil,
                                         height: CGFloat? = nil) {
-        if let width = width {
-            frame.size.width = width
-        }
-        if let height = height {
-            frame.size.height = height
-        }
+        setSize(width: width, height: height)
         let targetX: CGFloat = parentFrame.width / 2 - frame.width / 2 + padding.x
         let targetY: CGFloat = parentFrame.height / 2 - frame.height / 2 + padding.y
         frame.origin = CGPoint(x: targetX, y: targetY)
@@ -82,12 +77,7 @@ extension ZLayoutAnchorable {
                                   gravity: ZLayoutAnchorGravity,
                                   width: CGFloat? = nil,
                                   height: CGFloat? = nil) {
-        if let width = width {
-            frame.size.width = width
-        }
-        if let height = height {
-            frame.size.height = height
-        }
+        setSize(width: width, height: height)
         switch edge {
         case .left(let padding):
             frame.origin.x = padding
@@ -106,6 +96,25 @@ extension ZLayoutAnchorable {
 }
 
 private extension ZLayoutAnchorable {
+    
+    mutating func setSize(width: CGFloat? = nil, height: CGFloat? = nil) {
+        if let width = width {
+            if width == kZLayoutableAutoSize {
+                measure()
+                setSize(width: self.width, height: height)
+            } else {
+                frame.size.width = width
+            }
+        }
+        if let height = height {
+            if height == kZLayoutableAutoSize {
+                measure()
+                setSize(width: width, height: self.height)
+            } else {
+                frame.size.height = height
+            }
+        }
+    }
     
     mutating func anchorAndFillSize(edge: ZLayoutAnchorEdge, size: CGFloat, insets: UIEdgeInsets) {
         switch edge {

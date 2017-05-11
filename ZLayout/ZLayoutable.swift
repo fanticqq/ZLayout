@@ -8,6 +8,8 @@
 
 import Foundation
 
+public let kZLayoutableAutoSize: CGFloat = -1
+
 public protocol ZLayoutable {
     
     var frame: CGRect { get set }
@@ -22,6 +24,8 @@ public protocol ZLayoutable {
     var centerY: CGFloat { get }
     var width: CGFloat { get }
     var height: CGFloat { get }
+    
+    func measure()
 }
 
 extension ZLayoutable {

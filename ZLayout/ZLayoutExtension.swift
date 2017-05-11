@@ -8,9 +8,13 @@
 
 import UIKit
 
-extension UIView: ZLayoutable, ZLayoutPlaceable, ZLayoutAnchorable {
+extension UIView: ZLayoutable, ZLayoutAlignable, ZLayoutAnchorable {
     
     public var parentFrame: CGRect {
         return superview!.frame
+    }
+    
+    public func measure() {
+        self.sizeToFit()
     }
 }

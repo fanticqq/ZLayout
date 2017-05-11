@@ -36,8 +36,8 @@ class AnchorsViewController: UIViewController {
     }()
     
     lazy var centerView: UIView = {
-        let view = UIView()
-        view.backgroundColor = UIColor.darkGray
+        let view = UILabel()
+        view.text = "Example text"
         return view
     }()
 
@@ -56,7 +56,7 @@ class AnchorsViewController: UIViewController {
         rightView.anchorTo(edge: .right(padding: 20), gravity: .zeroCenter, width: 80, height: 80)
         topView.anchorTo(edge: .top(padding: 50), gravity: .zeroCenter, width: 110, height: 110)
         bottomView.anchorTo(edge: .bottom(padding: 20), gravity: .zeroCenter, width: 90, height: 90)
-        centerView.anchorInCenter(width: 180, height: 180)
+        centerView.anchorInCenter(width: kZLayoutableAutoSize, height: kZLayoutableAutoSize)
     }
 }
 
