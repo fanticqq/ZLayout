@@ -10,7 +10,7 @@ import XCTest
 import UIKit
 @testable import ZLayout
 
-class ZLayoutTestsPlaceable: XCTestCase {
+class ZLayoutTestsAnchors: XCTestCase {
     
     lazy var childView: UIView = {
         let view = UIView()
@@ -46,44 +46,6 @@ class ZLayoutTestsPlaceable: XCTestCase {
         super.tearDown()
     }
     
-    //MARK: Placing
-    
-    func testCenterPlacing() {
-        XCTAssert(childView.centerX != parentView.centerX)
-        XCTAssert(childView.centerY != parentView.centerY)
-        childView.center(to: parentView)
-        XCTAssert(childView.centerX == parentView.centerX)
-        XCTAssert(childView.centerY == parentView.centerY)
-    }
-    
-    func testLeftPlacing() {
-        rootView.addSubview(childView)
-        XCTAssert(childView.minX != parentView.minX)
-        childView.left(to: parentView)
-        XCTAssert(childView.minX == parentView.minX)
-    }
-    
-    func testRightPlacing() {
-        rootView.addSubview(childView)
-        XCTAssert(childView.maxX != parentView.maxX)
-        childView.right(to: parentView)
-        XCTAssert(childView.maxX == parentView.maxX)
-    }
-    
-    func testBottomPlacing() {
-        rootView.addSubview(childView)
-        XCTAssert(childView.maxY != parentView.maxY)
-        childView.bottom(to: parentView)
-        XCTAssert(childView.maxY == parentView.maxY)
-    }
-    
-    func testTopPlacing() {
-        rootView.addSubview(childView)
-        XCTAssert(childView.minY != parentView.minY)
-        childView.top(to: parentView)
-        XCTAssert(childView.minY == parentView.minY)
-    }
-    
     //MARK: Anchors
     
     func testAnchorToCenterInSuperview() {
@@ -97,25 +59,25 @@ class ZLayoutTestsPlaceable: XCTestCase {
     
     func testAnchorLeft() {
         parentView.addSubview(childView)
-        childView.anchorTo(edge: .zeroLeft, corner: .zeroTop)
+        childView.anchorTo(edge: .zeroLeft, gravity: .zeroTop)
         XCTAssert(childView.minX == parentView.bounds.minX)
     }
     
     func testAnchorRight() {
         parentView.addSubview(childView)
-        childView.anchorTo(edge: .zeroRight, corner: .zeroTop)
+        childView.anchorTo(edge: .zeroRight, gravity: .zeroTop)
         XCTAssert(childView.maxX == parentView.bounds.maxX)
     }
     
     func testAnchorTop() {
         parentView.addSubview(childView)
-        childView.anchorTo(edge: .zeroTop, corner: .zeroCenter)
+        childView.anchorTo(edge: .zeroTop, gravity: .zeroCenter)
         XCTAssert(childView.minY == parentView.bounds.minY)
     }
     
     func testAnchorBottom() {
         parentView.addSubview(childView)
-        childView.anchorTo(edge: .zeroBottom, corner: .zeroCenter)
+        childView.anchorTo(edge: .zeroBottom, gravity: .zeroCenter)
         XCTAssert(childView.maxY == parentView.bounds.maxY)
     }
 }

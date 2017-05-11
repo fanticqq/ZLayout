@@ -52,10 +52,10 @@ class AnchorsViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        leftView.anchorTo(edge: .left(padding: 20), corner: .zeroCenter, width: 50, height: 50)
-        rightView.anchorTo(edge: .right(padding: 20), corner: .zeroCenter, width: 80, height: 80)
-        topView.anchorTo(edge: .top(padding: 50), corner: .zeroCenter, width: 110, height: 110)
-        bottomView.anchorTo(edge: .bottom(padding: 20), corner: .zeroCenter, width: 90, height: 90)
+        leftView.anchorTo(edge: .left(padding: 20), gravity: .zeroCenter, width: 50, height: 50)
+        rightView.anchorTo(edge: .right(padding: 20), gravity: .zeroCenter, width: 80, height: 80)
+        topView.anchorTo(edge: .top(padding: 50), gravity: .zeroCenter, width: 110, height: 110)
+        bottomView.anchorTo(edge: .bottom(padding: 20), gravity: .zeroCenter, width: 90, height: 90)
         centerView.anchorInCenter(width: 180, height: 180)
     }
 }
