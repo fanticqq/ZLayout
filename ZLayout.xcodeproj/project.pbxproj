@@ -24,6 +24,7 @@
 		8AB5F2D21EC49C650053720D /* FillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB5F2D11EC49C650053720D /* FillViewController.swift */; };
 		8AB5F2D41EC4A3CE0053720D /* AnchorFillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB5F2D31EC4A3CE0053720D /* AnchorFillViewController.swift */; };
 		8AB5F2D61EC4FA160053720D /* ZLayoutTestsAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB5F2D51EC4FA160053720D /* ZLayoutTestsAlignment.swift */; };
+		8AB5F2DA1EC505400053720D /* ZLayoutUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB5F2D91EC505400053720D /* ZLayoutUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		8AB5F2D11EC49C650053720D /* FillViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FillViewController.swift; sourceTree = "<group>"; };
 		8AB5F2D31EC4A3CE0053720D /* AnchorFillViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnchorFillViewController.swift; sourceTree = "<group>"; };
 		8AB5F2D51EC4FA160053720D /* ZLayoutTestsAlignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLayoutTestsAlignment.swift; sourceTree = "<group>"; };
+		8AB5F2D91EC505400053720D /* ZLayoutUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLayoutUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				8A6B39821EC3442000EDA1F8 /* ZLayoutExtension.swift */,
 				8A6B39841EC3804E00EDA1F8 /* ZLayoutPlaceable.swift */,
 				8A6B39881EC39F1500EDA1F8 /* ZLayoutAnchorable.swift */,
+				8AB5F2D91EC505400053720D /* ZLayoutUtils.swift */,
 			);
 			path = ZLayout;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AB5F2DA1EC505400053720D /* ZLayoutUtils.swift in Sources */,
 				8A6B39831EC3442000EDA1F8 /* ZLayoutExtension.swift in Sources */,
 				8A6B39891EC39F1500EDA1F8 /* ZLayoutAnchorable.swift in Sources */,
 				8A6B39851EC3804E00EDA1F8 /* ZLayoutPlaceable.swift in Sources */,

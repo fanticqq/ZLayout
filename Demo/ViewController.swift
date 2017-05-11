@@ -56,7 +56,7 @@ class AnchorsViewController: UIViewController {
         rightView.anchorTo(edge: .right(padding: 20), gravity: .zeroCenter, width: 80, height: 80)
         topView.anchorTo(edge: .top(padding: 50), gravity: .zeroCenter, width: 110, height: 110)
         bottomView.anchorTo(edge: .bottom(padding: 20), gravity: .zeroCenter, width: 90, height: 90)
-        centerView.anchorInCenter(width: kZLayoutableAutoSize, height: kZLayoutableAutoSize)
+        centerView.anchorInCenter(width: .auto, height: .auto)
     }
 }
 

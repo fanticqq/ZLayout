@@ -8,8 +8,6 @@
 
 import Foundation
 
-public let kZLayoutableAutoSize: CGFloat = -1
-
 public protocol ZLayoutable {
     
     var frame: CGRect { get set }

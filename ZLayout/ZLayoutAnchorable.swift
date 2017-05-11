@@ -8,32 +8,6 @@
 
 import Foundation
 
-public enum ZLayoutAnchorEdge {
-    case left(padding: CGFloat)
-    case right(padding: CGFloat)
-    case top(padding: CGFloat)
-    case bottom(padding: CGFloat)
-    
-    public static let zeroLeft: ZLayoutAnchorEdge = .left(padding: 0)
-    public static let zeroRight: ZLayoutAnchorEdge = .right(padding: 0)
-    public static let zeroTop: ZLayoutAnchorEdge = .top(padding: 0)
-    public static let zeroBottom: ZLayoutAnchorEdge = .bottom(padding: 0)
-}
-
-public enum ZLayoutAnchorGravity {
-    case left(padding: CGFloat)
-    case right(padding: CGFloat)
-    case top(padding: CGFloat)
-    case bottom(padding: CGFloat)
-    case center(padding: CGFloat)
-    
-    public static let zeroLeft: ZLayoutAnchorGravity = .left(padding: 0)
-    public static let zeroRight: ZLayoutAnchorGravity = .right(padding: 0)
-    public static let zeroTop: ZLayoutAnchorGravity = .top(padding: 0)
-    public static let zeroBottom: ZLayoutAnchorGravity = .bottom(padding: 0)
-    public static let zeroCenter: ZLayoutAnchorGravity = .center(padding: 0)
-}
-
 public protocol ZLayoutAnchorable: ZLayoutable {
     
 }
@@ -65,8 +39,8 @@ extension ZLayoutAnchorable {
     }
     
     public mutating func anchorInCenter(padding: CGPoint = CGPoint.zero,
-                                        width: CGFloat? = nil,
-                                        height: CGFloat? = nil) {
+                                        width: ZLayoutSizeParameter? = nil,
+                                        height: ZLayoutSizeParameter? = nil) {
         setSize(width: width, height: height)
         let targetX: CGFloat = parentFrame.width / 2 - frame.width / 2 + padding.x
         let targetY: CGFloat = parentFrame.height / 2 - frame.height / 2 + padding.y
@@ -75,8 +49,8 @@ extension ZLayoutAnchorable {
     
     public mutating func anchorTo(edge: ZLayoutAnchorEdge,
                                   gravity: ZLayoutAnchorGravity,
-                                  width: CGFloat? = nil,
-                                  height: CGFloat? = nil) {
+                                  width: ZLayoutSizeParameter? = nil,
+                                  height: ZLayoutSizeParameter? = nil) {
         setSize(width: width, height: height)
         switch edge {
         case .left(let padding):
@@ -97,21 +71,23 @@ extension ZLayoutAnchorable {
 
 private extension ZLayoutAnchorable {
     
-    mutating func setSize(width: CGFloat? = nil, height: CGFloat? = nil) {
+    mutating func setSize(width: ZLayoutSizeParameter? = nil, height: ZLayoutSizeParameter? = nil) {
         if let width = width {
-            if width == kZLayoutableAutoSize {
+            switch width {
+            case .value(let value):
+                frame.size.width = value
+            case .auto:
                 measure()
-                setSize(width: self.width, height: height)
-            } else {
-                frame.size.width = width
+                setSize(width: .value(self.width), height: height)
             }
         }
         if let height = height {
-            if height == kZLayoutableAutoSize {
+            switch height {
+            case .value(let value):
+                frame.size.height = value
+            case .auto:
                 measure()
-                setSize(width: width, height: self.height)
-            } else {
-                frame.size.height = height
+                setSize(width: width, height: .value(self.height))
             }
         }
     }
