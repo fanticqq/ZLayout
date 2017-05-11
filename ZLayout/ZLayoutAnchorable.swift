@@ -13,11 +13,13 @@ public enum ZLayoutEdge {
     case right(padding: CGFloat)
     case top(padding: CGFloat)
     case bottom(padding: CGFloat)
+    case center(padding: CGPoint)
     
     public static let zeroLeft: ZLayoutEdge = .left(padding: 0)
     public static let zeroRight: ZLayoutEdge = .right(padding: 0)
     public static let zeroTop: ZLayoutEdge = .top(padding: 0)
     public static let zeroBottom: ZLayoutEdge = .bottom(padding: 0)
+    public static let zeroCenter: ZLayoutEdge = .center(padding: CGPoint.zero)
 }
 
 public enum ZLayoutCorner {
@@ -60,6 +62,10 @@ extension ZLayoutAnchorable {
         case .bottom(let padding):
             frame.origin.y = parentFrame.height - self.height - padding
             anchorHorizontalCorner(corner)
+        case .center(let padding):
+            let targetX: CGFloat = parentFrame.width / 2 - frame.width / 2 + padding.x
+            let targetY: CGFloat = parentFrame.height / 2 - frame.height / 2 + padding.y
+            frame.origin = CGPoint(x: targetX, y: targetY)
         }
     }
     
@@ -86,18 +92,6 @@ extension ZLayoutAnchorable {
             frame.origin.y = parentFrame.height / 2 - height / 2 + padding
         default:
             break
-        }
-    }
-    
-    public mutating func anchorToCenterInParent(width: CGFloat? = nil, height: CGFloat? = nil, offset: CGPoint = CGPoint.zero) {
-        let targetX: CGFloat = parentFrame.width / 2 - frame.width / 2 + offset.x
-        let targetY: CGFloat = parentFrame.height / 2 - frame.height / 2 + offset.y
-        self.frame.origin = CGPoint(x: targetX, y: targetY)
-        if let width = width {
-            self.frame.size.width = width
-        }
-        if let height = height {
-            self.frame.size.height = height
         }
     }
 }

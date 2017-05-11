@@ -16,7 +16,7 @@
 		8A6B39771EC33DEE00EDA1F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A6B39761EC33DEE00EDA1F8 /* Assets.xcassets */; };
 		8A6B397A1EC33DEE00EDA1F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A6B39781EC33DEE00EDA1F8 /* LaunchScreen.storyboard */; };
 		8A6B397F1EC33E0900EDA1F8 /* ZLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A6B394F1EC336CE00EDA1F8 /* ZLayout.framework */; };
-		8A6B39811EC33FEF00EDA1F8 /* ZLayoutFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6B39801EC33FEF00EDA1F8 /* ZLayoutFrame.swift */; };
+		8A6B39811EC33FEF00EDA1F8 /* ZLayoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6B39801EC33FEF00EDA1F8 /* ZLayoutable.swift */; };
 		8A6B39831EC3442000EDA1F8 /* ZLayoutExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6B39821EC3442000EDA1F8 /* ZLayoutExtension.swift */; };
 		8A6B39851EC3804E00EDA1F8 /* ZLayoutPlaceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6B39841EC3804E00EDA1F8 /* ZLayoutPlaceable.swift */; };
 		8A6B39891EC39F1500EDA1F8 /* ZLayoutAnchorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6B39881EC39F1500EDA1F8 /* ZLayoutAnchorable.swift */; };
@@ -46,7 +46,7 @@
 		8A6B39761EC33DEE00EDA1F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8A6B39791EC33DEE00EDA1F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8A6B397B1EC33DEE00EDA1F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8A6B39801EC33FEF00EDA1F8 /* ZLayoutFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLayoutFrame.swift; sourceTree = "<group>"; };
+		8A6B39801EC33FEF00EDA1F8 /* ZLayoutable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLayoutable.swift; sourceTree = "<group>"; };
 		8A6B39821EC3442000EDA1F8 /* ZLayoutExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLayoutExtension.swift; sourceTree = "<group>"; };
 		8A6B39841EC3804E00EDA1F8 /* ZLayoutPlaceable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLayoutPlaceable.swift; sourceTree = "<group>"; };
 		8A6B39881EC39F1500EDA1F8 /* ZLayoutAnchorable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLayoutAnchorable.swift; sourceTree = "<group>"; };
@@ -104,7 +104,7 @@
 			children = (
 				8A6B39521EC336CE00EDA1F8 /* ZLayout.h */,
 				8A6B39531EC336CE00EDA1F8 /* Info.plist */,
-				8A6B39801EC33FEF00EDA1F8 /* ZLayoutFrame.swift */,
+				8A6B39801EC33FEF00EDA1F8 /* ZLayoutable.swift */,
 				8A6B39821EC3442000EDA1F8 /* ZLayoutExtension.swift */,
 				8A6B39841EC3804E00EDA1F8 /* ZLayoutPlaceable.swift */,
 				8A6B39881EC39F1500EDA1F8 /* ZLayoutAnchorable.swift */,
@@ -284,7 +284,7 @@
 				8A6B39831EC3442000EDA1F8 /* ZLayoutExtension.swift in Sources */,
 				8A6B39891EC39F1500EDA1F8 /* ZLayoutAnchorable.swift in Sources */,
 				8A6B39851EC3804E00EDA1F8 /* ZLayoutPlaceable.swift in Sources */,
-				8A6B39811EC33FEF00EDA1F8 /* ZLayoutFrame.swift in Sources */,
+				8A6B39811EC33FEF00EDA1F8 /* ZLayoutable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -552,6 +552,7 @@
 				8A6B39651EC336CE00EDA1F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8A6B39661EC336CE00EDA1F8 /* Build configuration list for PBXNativeTarget "ZLayoutTests" */ = {
 			isa = XCConfigurationList;
@@ -560,6 +561,7 @@
 				8A6B39681EC336CE00EDA1F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8A6B397C1EC33DEE00EDA1F8 /* Build configuration list for PBXNativeTarget "Demo" */ = {
 			isa = XCConfigurationList;
@@ -568,6 +570,7 @@
 				8A6B397E1EC33DEE00EDA1F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

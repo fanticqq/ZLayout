@@ -34,6 +34,12 @@ class ViewController: UIViewController {
         view.backgroundColor = UIColor.green
         return view
     }()
+    
+    lazy var centerView: UIView = {
+        let view = UIView()
+        view.backgroundColor = UIColor.darkGray
+        return view
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +47,7 @@ class ViewController: UIViewController {
         self.view.addSubview(rightView)
         self.view.addSubview(topView)
         self.view.addSubview(bottomView)
+        self.view.addSubview(centerView)
     }
     
     override func viewDidLayoutSubviews() {
@@ -49,6 +56,7 @@ class ViewController: UIViewController {
         rightView.anchorTo(edge: .right(padding: 20), corner: .zeroCenter, width: 80, height: 80)
         topView.anchorTo(edge: .top(padding: 50), corner: .zeroCenter, width: 110, height: 110)
         bottomView.anchorTo(edge: .bottom(padding: 20), corner: .zeroCenter, width: 90, height: 90)
+        centerView.anchorTo(edge: .zeroCenter, corner: .zeroTop, width: 180, height: 180)
     }
 }
 
