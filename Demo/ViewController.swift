@@ -9,7 +9,7 @@
 import UIKit
 import ZLayout
 
-class ViewController: UIViewController {
+class AnchorsViewController: UIViewController {
     
     lazy var leftView: UIView = {
         let view = UIView()
@@ -56,7 +56,7 @@ class ViewController: UIViewController {
         rightView.anchorTo(edge: .right(padding: 20), corner: .zeroCenter, width: 80, height: 80)
         topView.anchorTo(edge: .top(padding: 50), corner: .zeroCenter, width: 110, height: 110)
         bottomView.anchorTo(edge: .bottom(padding: 20), corner: .zeroCenter, width: 90, height: 90)
-        centerView.anchorTo(edge: .zeroCenter, corner: .zeroTop, width: 180, height: 180)
+        centerView.anchorInCenter(width: 180, height: 180)
     }
 }
 

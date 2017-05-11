@@ -13,13 +13,11 @@ public enum ZLayoutEdge {
     case right(padding: CGFloat)
     case top(padding: CGFloat)
     case bottom(padding: CGFloat)
-    case center(padding: CGPoint)
     
     public static let zeroLeft: ZLayoutEdge = .left(padding: 0)
     public static let zeroRight: ZLayoutEdge = .right(padding: 0)
     public static let zeroTop: ZLayoutEdge = .top(padding: 0)
     public static let zeroBottom: ZLayoutEdge = .bottom(padding: 0)
-    public static let zeroCenter: ZLayoutEdge = .center(padding: CGPoint.zero)
 }
 
 public enum ZLayoutCorner {
@@ -42,7 +40,34 @@ public protocol ZLayoutAnchorable: ZLayoutable {
 
 extension ZLayoutAnchorable {
     
-    public mutating func anchorTo(edge: ZLayoutEdge, corner: ZLayoutCorner, width: CGFloat? = nil, height: CGFloat? = nil) {
+    public mutating func anchorAndFill(edge: ZLayoutEdge, insets: UIEdgeInsets = UIEdgeInsets.zero) {
+        
+    }
+    
+    public mutating func fillSuperview(padding: UIEdgeInsets = UIEdgeInsets.zero) {
+        frame.size = CGSize(width: parentFrame.width - padding.left - padding.right,
+                            height: parentFrame.height - padding.top - padding.bottom)
+        frame.origin = CGPoint(x: padding.top, y: padding.left)
+    }
+    
+    public mutating func anchorInCenter(padding: CGPoint = CGPoint.zero,
+                                        width: CGFloat? = nil,
+                                        height: CGFloat? = nil) {
+        if let width = width {
+            frame.size.width = width
+        }
+        if let height = height {
+            frame.size.height = height
+        }
+        let targetX: CGFloat = parentFrame.width / 2 - frame.width / 2 + padding.x
+        let targetY: CGFloat = parentFrame.height / 2 - frame.height / 2 + padding.y
+        frame.origin = CGPoint(x: targetX, y: targetY)
+    }
+    
+    public mutating func anchorTo(edge: ZLayoutEdge,
+                                  corner: ZLayoutCorner,
+                                  width: CGFloat? = nil,
+                                  height: CGFloat? = nil) {
         if let width = width {
             frame.size.width = width
         }
@@ -62,10 +87,6 @@ extension ZLayoutAnchorable {
         case .bottom(let padding):
             frame.origin.y = parentFrame.height - self.height - padding
             anchorHorizontalCorner(corner)
-        case .center(let padding):
-            let targetX: CGFloat = parentFrame.width / 2 - frame.width / 2 + padding.x
-            let targetY: CGFloat = parentFrame.height / 2 - frame.height / 2 + padding.y
-            frame.origin = CGPoint(x: targetX, y: targetY)
         }
     }
     
