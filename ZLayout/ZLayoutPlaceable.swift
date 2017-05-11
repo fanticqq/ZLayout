@@ -8,9 +8,9 @@
 
 import Foundation
 
-public protocol ZLayoutPlaceable: ZLayoutable {
+public protocol ZLayoutAlignable: ZLayoutable {
 }
 
-extension ZLayoutPlaceable {
+extension ZLayoutAlignable {
     
 }
