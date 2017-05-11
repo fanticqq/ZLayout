@@ -10,16 +10,45 @@ import UIKit
 import ZLayout
 
 class ViewController: UIViewController {
+    
+    lazy var leftView: UIView = {
+        let view = UIView()
+        view.backgroundColor = UIColor.red
+        return view
+    }()
+    
+    lazy var rightView: UIView = {
+        let view = UIView()
+        view.backgroundColor = UIColor.blue
+        return view
+    }()
+    
+    lazy var topView: UIView = {
+        let view = UIView()
+        view.backgroundColor = UIColor.orange
+        return view
+    }()
+    
+    lazy var bottomView: UIView = {
+        let view = UIView()
+        view.backgroundColor = UIColor.green
+        return view
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.addSubview(leftView)
+        self.view.addSubview(rightView)
+        self.view.addSubview(topView)
+        self.view.addSubview(bottomView)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        leftView.anchorTo(edge: .left(padding: 20), corner: .zeroCenter, width: 50, height: 50)
+        rightView.anchorTo(edge: .right(padding: 20), corner: .zeroCenter, width: 80, height: 80)
+        topView.anchorTo(edge: .top(padding: 50), corner: .zeroCenter, width: 110, height: 110)
+        bottomView.anchorTo(edge: .bottom(padding: 20), corner: .zeroCenter, width: 90, height: 90)
     }
-
-
 }
 

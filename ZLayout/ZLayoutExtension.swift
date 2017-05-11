@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIView: ZLayoutFrame {
+extension UIView: ZLayoutable, ZLayoutPlaceable, ZLayoutAnchorable {
     
     public var parentFrame: CGRect {
         return superview!.frame

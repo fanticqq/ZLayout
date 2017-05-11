@@ -6,9 +6,9 @@
 //  Copyright © 2017 Igor Zarubin. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-public protocol ZLayoutFrame {
+public protocol ZLayoutable {
     
     var frame: CGRect { get set }
     var parentFrame: CGRect { get }
@@ -24,7 +24,7 @@ public protocol ZLayoutFrame {
     var height: CGFloat { get }
 }
 
-extension ZLayoutFrame {
+extension ZLayoutable {
     
     public var left: CGFloat {
         return frame.origin.x

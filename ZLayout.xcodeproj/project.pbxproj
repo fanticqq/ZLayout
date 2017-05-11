@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8A6B39591EC336CE00EDA1F8 /* ZLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A6B394F1EC336CE00EDA1F8 /* ZLayout.framework */; };
-		8A6B395E1EC336CE00EDA1F8 /* ZLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6B395D1EC336CE00EDA1F8 /* ZLayoutTests.swift */; };
+		8A6B395E1EC336CE00EDA1F8 /* ZLayoutTestsPlaceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6B395D1EC336CE00EDA1F8 /* ZLayoutTestsPlaceable.swift */; };
 		8A6B39601EC336CE00EDA1F8 /* ZLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A6B39521EC336CE00EDA1F8 /* ZLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8A6B39701EC33DEE00EDA1F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6B396F1EC33DEE00EDA1F8 /* AppDelegate.swift */; };
 		8A6B39721EC33DEE00EDA1F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6B39711EC33DEE00EDA1F8 /* ViewController.swift */; };
@@ -18,6 +18,8 @@
 		8A6B397F1EC33E0900EDA1F8 /* ZLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A6B394F1EC336CE00EDA1F8 /* ZLayout.framework */; };
 		8A6B39811EC33FEF00EDA1F8 /* ZLayoutFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6B39801EC33FEF00EDA1F8 /* ZLayoutFrame.swift */; };
 		8A6B39831EC3442000EDA1F8 /* ZLayoutExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6B39821EC3442000EDA1F8 /* ZLayoutExtension.swift */; };
+		8A6B39851EC3804E00EDA1F8 /* ZLayoutPlaceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6B39841EC3804E00EDA1F8 /* ZLayoutPlaceable.swift */; };
+		8A6B39891EC39F1500EDA1F8 /* ZLayoutAnchorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6B39881EC39F1500EDA1F8 /* ZLayoutAnchorable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +37,7 @@
 		8A6B39521EC336CE00EDA1F8 /* ZLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZLayout.h; sourceTree = "<group>"; };
 		8A6B39531EC336CE00EDA1F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A6B39581EC336CE00EDA1F8 /* ZLayoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZLayoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8A6B395D1EC336CE00EDA1F8 /* ZLayoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLayoutTests.swift; sourceTree = "<group>"; };
+		8A6B395D1EC336CE00EDA1F8 /* ZLayoutTestsPlaceable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLayoutTestsPlaceable.swift; sourceTree = "<group>"; };
 		8A6B395F1EC336CE00EDA1F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A6B396D1EC33DEE00EDA1F8 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A6B396F1EC33DEE00EDA1F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +48,8 @@
 		8A6B397B1EC33DEE00EDA1F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A6B39801EC33FEF00EDA1F8 /* ZLayoutFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLayoutFrame.swift; sourceTree = "<group>"; };
 		8A6B39821EC3442000EDA1F8 /* ZLayoutExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLayoutExtension.swift; sourceTree = "<group>"; };
+		8A6B39841EC3804E00EDA1F8 /* ZLayoutPlaceable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLayoutPlaceable.swift; sourceTree = "<group>"; };
+		8A6B39881EC39F1500EDA1F8 /* ZLayoutAnchorable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLayoutAnchorable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,8 @@
 				8A6B39531EC336CE00EDA1F8 /* Info.plist */,
 				8A6B39801EC33FEF00EDA1F8 /* ZLayoutFrame.swift */,
 				8A6B39821EC3442000EDA1F8 /* ZLayoutExtension.swift */,
+				8A6B39841EC3804E00EDA1F8 /* ZLayoutPlaceable.swift */,
+				8A6B39881EC39F1500EDA1F8 /* ZLayoutAnchorable.swift */,
 			);
 			path = ZLayout;
 			sourceTree = "<group>";
@@ -109,7 +115,7 @@
 		8A6B395C1EC336CE00EDA1F8 /* ZLayoutTests */ = {
 			isa = PBXGroup;
 			children = (
-				8A6B395D1EC336CE00EDA1F8 /* ZLayoutTests.swift */,
+				8A6B395D1EC336CE00EDA1F8 /* ZLayoutTestsPlaceable.swift */,
 				8A6B395F1EC336CE00EDA1F8 /* Info.plist */,
 			);
 			path = ZLayoutTests;
@@ -276,6 +282,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A6B39831EC3442000EDA1F8 /* ZLayoutExtension.swift in Sources */,
+				8A6B39891EC39F1500EDA1F8 /* ZLayoutAnchorable.swift in Sources */,
+				8A6B39851EC3804E00EDA1F8 /* ZLayoutPlaceable.swift in Sources */,
 				8A6B39811EC33FEF00EDA1F8 /* ZLayoutFrame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,7 +292,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A6B395E1EC336CE00EDA1F8 /* ZLayoutTests.swift in Sources */,
+				8A6B395E1EC336CE00EDA1F8 /* ZLayoutTestsPlaceable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
