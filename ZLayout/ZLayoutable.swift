@@ -13,10 +13,10 @@ public protocol ZLayoutable {
     var frame: CGRect { get set }
     var parentFrame: CGRect { get }
     
-    var left: CGFloat { get }
-    var right: CGFloat { get }
-    var top: CGFloat { get }
-    var bottom: CGFloat { get }
+    var minX: CGFloat { get }
+    var maxX: CGFloat { get }
+    var minY: CGFloat { get }
+    var maxY: CGFloat { get }
     var center: CGPoint { get }
     var centerX: CGFloat { get }
     var centerY: CGFloat { get }
@@ -26,16 +26,20 @@ public protocol ZLayoutable {
 
 extension ZLayoutable {
     
-    public var left: CGFloat {
+    public var minX: CGFloat {
         return frame.origin.x
     }
     
-    public var right: CGFloat {
+    public var maxX: CGFloat {
         return frame.origin.x + frame.size.width
     }
     
-    public var top: CGFloat {
+    public var minY: CGFloat {
         return frame.origin.y
+    }
+    
+    public var maxY: CGFloat {
+        return frame.origin.y + frame.size.height
     }
     
     public var center: CGPoint {
@@ -43,14 +47,10 @@ extension ZLayoutable {
     }
     
     public var centerX: CGFloat {
-        return left + width / 2
+        return minX + width / 2
     }
     public var centerY: CGFloat {
-        return top + height / 2
-    }
-    
-    public var bottom: CGFloat {
-        return frame.origin.y + frame.size.height
+        return minY + height / 2
     }
     
     public var width: CGFloat {

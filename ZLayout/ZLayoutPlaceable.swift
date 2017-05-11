@@ -20,18 +20,18 @@ extension ZLayoutPlaceable {
     }
     
     public mutating func left(to layout: ZLayoutable, offset: CGFloat = 0) {
-        self.frame.origin.x = layout.left + offset
+        self.frame.origin.x = layout.minX + offset
     }
     
     public mutating func right(to layout: ZLayoutable, offset: CGFloat = 0) {
-        self.frame.origin.x = layout.right - self.frame.width + offset
+        self.frame.origin.x = layout.maxX - self.frame.width + offset
     }
     
     public mutating func top(to layout: ZLayoutable, offset: CGFloat = 0) {
-        self.frame.origin.y = layout.top + offset
+        self.frame.origin.y = layout.minY + offset
     }
     
     public mutating func bottom(to layout: ZLayoutable, offset: CGFloat = 0) {
-        self.frame.origin.y = layout.bottom - self.frame.height + offset
+        self.frame.origin.y = layout.maxY - self.frame.height + offset
     }
 }
