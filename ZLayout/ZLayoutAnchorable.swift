@@ -40,8 +40,22 @@ public protocol ZLayoutAnchorable: ZLayoutable {
 
 extension ZLayoutAnchorable {
     
-    public mutating func anchorAndFill(edge: ZLayoutEdge, insets: UIEdgeInsets = UIEdgeInsets.zero) {
-        
+    public mutating func anchorAndFill(edge: ZLayoutEdge,
+                                       size: CGFloat,
+                                       insets: UIEdgeInsets = UIEdgeInsets.zero) {
+        anchorAndFillSize(edge: edge, size: size, insets: insets)
+        frame.origin.x = insets.left
+        frame.origin.y = insets.top
+        switch edge {
+        case .left:
+            break
+        case .right:
+            frame.origin.x = parentFrame.width - self.width - insets.right
+        case .top:
+            break
+        case .bottom:
+            frame.origin.y = parentFrame.height - self.height - insets.bottom
+        }
     }
     
     public mutating func fillSuperview(padding: UIEdgeInsets = UIEdgeInsets.zero) {
@@ -89,8 +103,26 @@ extension ZLayoutAnchorable {
             anchorHorizontalCorner(corner)
         }
     }
+}
+
+private extension ZLayoutAnchorable {
     
-    private mutating func anchorHorizontalCorner(_ corner: ZLayoutCorner) {
+    mutating func anchorAndFillSize(edge: ZLayoutEdge, size: CGFloat, insets: UIEdgeInsets) {
+        switch edge {
+        case .left:
+            fallthrough
+        case .right:
+            frame.size = CGSize(width: size - insets.left - insets.right,
+                                height: parentFrame.height - insets.top - insets.bottom)
+        case .top:
+            fallthrough
+        case .bottom:
+            frame.size = CGSize(width: parentFrame.width - insets.left - insets.right,
+                                height: size - insets.top - insets.bottom)
+        }
+    }
+    
+    mutating func anchorHorizontalCorner(_ corner: ZLayoutCorner) {
         switch corner {
         case .left(let padding):
             frame.origin.x = padding
@@ -103,7 +135,7 @@ extension ZLayoutAnchorable {
         }
     }
     
-    private mutating func anchorVerticalCorner(_ corner: ZLayoutCorner) {
+    mutating func anchorVerticalCorner(_ corner: ZLayoutCorner) {
         switch corner {
         case .top(let padding):
             frame.origin.y = padding

@@ -22,6 +22,7 @@
 		8A6B39891EC39F1500EDA1F8 /* ZLayoutAnchorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6B39881EC39F1500EDA1F8 /* ZLayoutAnchorable.swift */; };
 		8AB5F2D01EC497770053720D /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB5F2CF1EC497770053720D /* DemoViewController.swift */; };
 		8AB5F2D21EC49C650053720D /* FillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB5F2D11EC49C650053720D /* FillViewController.swift */; };
+		8AB5F2D41EC4A3CE0053720D /* AnchorFillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB5F2D31EC4A3CE0053720D /* AnchorFillViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		8A6B39881EC39F1500EDA1F8 /* ZLayoutAnchorable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLayoutAnchorable.swift; sourceTree = "<group>"; };
 		8AB5F2CF1EC497770053720D /* DemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoViewController.swift; sourceTree = "<group>"; };
 		8AB5F2D11EC49C650053720D /* FillViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FillViewController.swift; sourceTree = "<group>"; };
+		8AB5F2D31EC4A3CE0053720D /* AnchorFillViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnchorFillViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 				8A6B397B1EC33DEE00EDA1F8 /* Info.plist */,
 				8AB5F2CF1EC497770053720D /* DemoViewController.swift */,
 				8AB5F2D11EC49C650053720D /* FillViewController.swift */,
+				8AB5F2D31EC4A3CE0053720D /* AnchorFillViewController.swift */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AB5F2D01EC497770053720D /* DemoViewController.swift in Sources */,
+				8AB5F2D41EC4A3CE0053720D /* AnchorFillViewController.swift in Sources */,
 				8AB5F2D21EC49C650053720D /* FillViewController.swift in Sources */,
 				8A6B39721EC33DEE00EDA1F8 /* ViewController.swift in Sources */,
 				8A6B39701EC33DEE00EDA1F8 /* AppDelegate.swift in Sources */,
