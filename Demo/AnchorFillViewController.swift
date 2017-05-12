@@ -44,19 +44,19 @@ class AnchorFillViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        leftView.anchorAndFill(edge: .zeroLeft,
+        leftView.anchorAndFillParent(edge: .zeroLeft,
                                size: 100,
                                insets: UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10))
-        rightView.anchorAndFill(edge: .zeroRight,
+        rightView.anchorAndFillParent(edge: .zeroRight,
                                 size: 100,
                                 insets: UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10))
-        topView.anchorAndFill(edge: .zeroTop,
+        topView.anchorAndFillParent(edge: .zeroTop,
                               size: 100,
                               insets: UIEdgeInsets(top: 10,
                                                    left: 20 + leftView.width,
                                                    bottom: 10,
                                                    right: 20 + rightView.width))
-        bottomView.anchorAndFill(edge: .zeroBottom,
+        bottomView.anchorAndFillParent(edge: .zeroBottom,
                                  size: 100,
                                  insets: UIEdgeInsets(top: 10,
                                                       left: 20 + leftView.width,

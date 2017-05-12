@@ -14,7 +14,7 @@ public protocol ZLayoutAnchorable: ZLayoutable {
 
 extension ZLayoutAnchorable {
     
-    public mutating func anchorAndFill(edge: ZLayoutAnchorEdge,
+    public mutating func anchorAndFillParent(edge: ZLayoutAnchorEdge,
                                        size: CGFloat,
                                        insets: UIEdgeInsets = UIEdgeInsets.zero) {
         anchorAndFillSize(edge: edge, size: size, insets: insets)
@@ -38,7 +38,7 @@ extension ZLayoutAnchorable {
         frame.origin = CGPoint(x: padding.top, y: padding.left)
     }
     
-    public mutating func anchorInCenter(padding: CGPoint = CGPoint.zero,
+    public mutating func anchorToCenterInParent(padding: CGPoint = CGPoint.zero,
                                         width: ZLayoutSizeParameter? = nil,
                                         height: ZLayoutSizeParameter? = nil) {
         setSize(width: width, height: height)
@@ -47,8 +47,8 @@ extension ZLayoutAnchorable {
         frame.origin = CGPoint(x: targetX, y: targetY)
     }
     
-    public mutating func anchorTo(edge: ZLayoutAnchorEdge,
-                                  gravity: ZLayoutAnchorGravity,
+    public mutating func anchorToParent(edge: ZLayoutAnchorEdge,
+                                  gravity: ZLayoutGravity,
                                   width: ZLayoutSizeParameter? = nil,
                                   height: ZLayoutSizeParameter? = nil) {
         setSize(width: width, height: height)
@@ -71,27 +71,6 @@ extension ZLayoutAnchorable {
 
 private extension ZLayoutAnchorable {
     
-    mutating func setSize(width: ZLayoutSizeParameter? = nil, height: ZLayoutSizeParameter? = nil) {
-        if let width = width {
-            switch width {
-            case .value(let value):
-                frame.size.width = value
-            case .auto:
-                measure()
-                setSize(width: .value(self.width), height: height)
-            }
-        }
-        if let height = height {
-            switch height {
-            case .value(let value):
-                frame.size.height = value
-            case .auto:
-                measure()
-                setSize(width: width, height: .value(self.height))
-            }
-        }
-    }
-    
     mutating func anchorAndFillSize(edge: ZLayoutAnchorEdge, size: CGFloat, insets: UIEdgeInsets) {
         switch edge {
         case .left:
@@ -107,7 +86,7 @@ private extension ZLayoutAnchorable {
         }
     }
     
-    mutating func anchorHorizontal(_ gravity: ZLayoutAnchorGravity) {
+    mutating func anchorHorizontal(_ gravity: ZLayoutGravity) {
         switch gravity {
         case .left(let padding):
             frame.origin.x = padding
@@ -120,7 +99,7 @@ private extension ZLayoutAnchorable {
         }
     }
     
-    mutating func anchorVertical(_ gravity: ZLayoutAnchorGravity) {
+    mutating func anchorVertical(_ gravity: ZLayoutGravity) {
         switch gravity {
         case .top(let padding):
             frame.origin.y = padding

@@ -52,32 +52,32 @@ class ZLayoutTestsAnchors: XCTestCase {
         parentView.addSubview(childView)
         XCTAssert(childView.centerX != parentView.width / 2)
         XCTAssert(childView.centerY != parentView.height / 2)
-        childView.anchorInCenter()
+        childView.anchorToCenterInParent()
         XCTAssert(childView.centerX == parentView.width / 2)
         XCTAssert(childView.centerY == parentView.height / 2)
     }
     
     func testAnchorLeft() {
         parentView.addSubview(childView)
-        childView.anchorTo(edge: .zeroLeft, gravity: .zeroTop)
+        childView.anchorToParent(edge: .zeroLeft, gravity: .zeroTop)
         XCTAssert(childView.minX == parentView.bounds.minX)
     }
     
     func testAnchorRight() {
         parentView.addSubview(childView)
-        childView.anchorTo(edge: .zeroRight, gravity: .zeroTop)
+        childView.anchorToParent(edge: .zeroRight, gravity: .zeroTop)
         XCTAssert(childView.maxX == parentView.bounds.maxX)
     }
     
     func testAnchorTop() {
         parentView.addSubview(childView)
-        childView.anchorTo(edge: .zeroTop, gravity: .zeroCenter)
+        childView.anchorToParent(edge: .zeroTop, gravity: .zeroCenter)
         XCTAssert(childView.minY == parentView.bounds.minY)
     }
     
     func testAnchorBottom() {
         parentView.addSubview(childView)
-        childView.anchorTo(edge: .zeroBottom, gravity: .zeroCenter)
+        childView.anchorToParent(edge: .zeroBottom, gravity: .zeroCenter)
         XCTAssert(childView.maxY == parentView.bounds.maxY)
     }
 }
