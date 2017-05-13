@@ -94,10 +94,20 @@ class AlignViewController: UIViewController {
         self.view.addSubview(leftTopView)
         self.view.addSubview(leftBottomView)
         self.view.addSubview(leftCenterView)
+        
         self.view.addSubview(rightTopView)
         self.view.addSubview(rightBottomView)
         self.view.addSubview(rightCenterView)
+        
         self.view.addSubview(centerView)
+        
+        self.view.addSubview(topLeftView)
+        self.view.addSubview(topRightView)
+        self.view.addSubview(topCenterView)
+        
+        self.view.addSubview(bottomLeftView)
+        self.view.addSubview(bottomRightView)
+        self.view.addSubview(bottomCenterView)
     }
     
     override func viewDidLayoutSubviews() {
@@ -135,5 +145,37 @@ class AlignViewController: UIViewController {
                               gravity: .zeroBottom,
                               width: 80,
                               height: 30)
+        
+        topLeftView.align(to: .top(padding: 20),
+                           ofLayout: centerView,
+                           gravity: .zeroLeft,
+                           width: 30,
+                           height: 80)
+        topRightView.align(to: .top(padding: 20),
+                              ofLayout: centerView,
+                              gravity: .zeroRight,
+                              width: 30,
+                              height: 80)
+        topCenterView.align(to: .top(padding: 20),
+                              ofLayout: centerView,
+                              gravity: .zeroCenter,
+                              width: 30,
+                              height: 80)
+        
+        bottomLeftView.align(to: .bottom(padding: 20),
+                          ofLayout: centerView,
+                          gravity: .zeroLeft,
+                          width: 30,
+                          height: 80)
+        bottomRightView.align(to: .bottom(padding: 20),
+                           ofLayout: centerView,
+                           gravity: .zeroRight,
+                           width: 30,
+                           height: 80)
+        bottomCenterView.align(to: .bottom(padding: 20),
+                            ofLayout: centerView,
+                            gravity: .zeroCenter,
+                            width: 30,
+                            height: 80)
     }
 }

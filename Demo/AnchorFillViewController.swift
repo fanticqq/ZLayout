@@ -50,17 +50,17 @@ class AnchorFillViewController: UIViewController {
         rightView.anchorAndFillParent(edge: .zeroRight,
                                 size: 100,
                                 insets: UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10))
-        topView.anchorAndFillParent(edge: .zeroTop,
-                              size: 100,
-                              insets: UIEdgeInsets(top: 10,
-                                                   left: 20 + leftView.width,
-                                                   bottom: 10,
-                                                   right: 20 + rightView.width))
-        bottomView.anchorAndFillParent(edge: .zeroBottom,
-                                 size: 100,
-                                 insets: UIEdgeInsets(top: 10,
-                                                      left: 20 + leftView.width,
-                                                      bottom: 10,
-                                                      right: 20 + rightView.width))
+        topView.alignAndFill(to: .right(padding: 10),
+                             ofLayout: leftView,
+                             gravity: .zeroTop,
+                             padding: 10,
+                             toLayout: rightView,
+                             size: 100)
+        bottomView.alignAndFill(to: .left(padding: 10),
+                             ofLayout: rightView,
+                             gravity: .zeroBottom,
+                             padding: 10,
+                             toLayout: leftView,
+                             size: 100)
     }
 }
