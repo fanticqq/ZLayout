@@ -9,8 +9,7 @@
 import UIKit
 
 class FillViewController: UIViewController {
-    
-    
+
     lazy var childView: UIView = {
         let view = UIView()
         view.backgroundColor = UIColor.red

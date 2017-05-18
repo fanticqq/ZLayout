@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A0C53D01EC63DA0004C4D2F /* AlignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0C53CF1EC63DA0004C4D2F /* AlignViewController.swift */; };
 		8A6B39591EC336CE00EDA1F8 /* ZLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A6B394F1EC336CE00EDA1F8 /* ZLayout.framework */; };
 		8A6B395E1EC336CE00EDA1F8 /* ZLayoutTestsAnchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6B395D1EC336CE00EDA1F8 /* ZLayoutTestsAnchors.swift */; };
 		8A6B39601EC336CE00EDA1F8 /* ZLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A6B39521EC336CE00EDA1F8 /* ZLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -18,12 +19,13 @@
 		8A6B397F1EC33E0900EDA1F8 /* ZLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A6B394F1EC336CE00EDA1F8 /* ZLayout.framework */; };
 		8A6B39811EC33FEF00EDA1F8 /* ZLayoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6B39801EC33FEF00EDA1F8 /* ZLayoutable.swift */; };
 		8A6B39831EC3442000EDA1F8 /* ZLayoutExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6B39821EC3442000EDA1F8 /* ZLayoutExtension.swift */; };
-		8A6B39851EC3804E00EDA1F8 /* ZLayoutPlaceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6B39841EC3804E00EDA1F8 /* ZLayoutPlaceable.swift */; };
+		8A6B39851EC3804E00EDA1F8 /* ZLayoutAlignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6B39841EC3804E00EDA1F8 /* ZLayoutAlignable.swift */; };
 		8A6B39891EC39F1500EDA1F8 /* ZLayoutAnchorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6B39881EC39F1500EDA1F8 /* ZLayoutAnchorable.swift */; };
 		8AB5F2D01EC497770053720D /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB5F2CF1EC497770053720D /* DemoViewController.swift */; };
 		8AB5F2D21EC49C650053720D /* FillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB5F2D11EC49C650053720D /* FillViewController.swift */; };
 		8AB5F2D41EC4A3CE0053720D /* AnchorFillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB5F2D31EC4A3CE0053720D /* AnchorFillViewController.swift */; };
 		8AB5F2D61EC4FA160053720D /* ZLayoutTestsAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB5F2D51EC4FA160053720D /* ZLayoutTestsAlignment.swift */; };
+		8AB5F2DA1EC505400053720D /* ZLayoutUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB5F2D91EC505400053720D /* ZLayoutUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8A0C53CF1EC63DA0004C4D2F /* AlignViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlignViewController.swift; sourceTree = "<group>"; };
 		8A6B394F1EC336CE00EDA1F8 /* ZLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A6B39521EC336CE00EDA1F8 /* ZLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZLayout.h; sourceTree = "<group>"; };
 		8A6B39531EC336CE00EDA1F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -52,12 +55,13 @@
 		8A6B397B1EC33DEE00EDA1F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A6B39801EC33FEF00EDA1F8 /* ZLayoutable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLayoutable.swift; sourceTree = "<group>"; };
 		8A6B39821EC3442000EDA1F8 /* ZLayoutExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLayoutExtension.swift; sourceTree = "<group>"; };
-		8A6B39841EC3804E00EDA1F8 /* ZLayoutPlaceable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLayoutPlaceable.swift; sourceTree = "<group>"; };
+		8A6B39841EC3804E00EDA1F8 /* ZLayoutAlignable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLayoutAlignable.swift; sourceTree = "<group>"; };
 		8A6B39881EC39F1500EDA1F8 /* ZLayoutAnchorable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLayoutAnchorable.swift; sourceTree = "<group>"; };
 		8AB5F2CF1EC497770053720D /* DemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoViewController.swift; sourceTree = "<group>"; };
 		8AB5F2D11EC49C650053720D /* FillViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FillViewController.swift; sourceTree = "<group>"; };
 		8AB5F2D31EC4A3CE0053720D /* AnchorFillViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnchorFillViewController.swift; sourceTree = "<group>"; };
 		8AB5F2D51EC4FA160053720D /* ZLayoutTestsAlignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLayoutTestsAlignment.swift; sourceTree = "<group>"; };
+		8AB5F2D91EC505400053720D /* ZLayoutUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLayoutUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,8 +118,9 @@
 				8A6B39531EC336CE00EDA1F8 /* Info.plist */,
 				8A6B39801EC33FEF00EDA1F8 /* ZLayoutable.swift */,
 				8A6B39821EC3442000EDA1F8 /* ZLayoutExtension.swift */,
-				8A6B39841EC3804E00EDA1F8 /* ZLayoutPlaceable.swift */,
+				8A6B39841EC3804E00EDA1F8 /* ZLayoutAlignable.swift */,
 				8A6B39881EC39F1500EDA1F8 /* ZLayoutAnchorable.swift */,
+				8AB5F2D91EC505400053720D /* ZLayoutUtils.swift */,
 			);
 			path = ZLayout;
 			sourceTree = "<group>";
@@ -123,6 +128,7 @@
 		8A6B395C1EC336CE00EDA1F8 /* ZLayoutTests */ = {
 			isa = PBXGroup;
 			children = (
+				8AB5F2D51EC4FA160053720D /* ZLayoutTestsAlignment.swift */,
 				8A6B395D1EC336CE00EDA1F8 /* ZLayoutTestsAnchors.swift */,
 				8A6B395F1EC336CE00EDA1F8 /* Info.plist */,
 				8AB5F2D51EC4FA160053720D /* ZLayoutTestsAlignment.swift */,
@@ -142,6 +148,7 @@
 				8AB5F2CF1EC497770053720D /* DemoViewController.swift */,
 				8AB5F2D11EC49C650053720D /* FillViewController.swift */,
 				8AB5F2D31EC4A3CE0053720D /* AnchorFillViewController.swift */,
+				8A0C53CF1EC63DA0004C4D2F /* AlignViewController.swift */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -293,9 +300,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AB5F2DA1EC505400053720D /* ZLayoutUtils.swift in Sources */,
 				8A6B39831EC3442000EDA1F8 /* ZLayoutExtension.swift in Sources */,
 				8A6B39891EC39F1500EDA1F8 /* ZLayoutAnchorable.swift in Sources */,
-				8A6B39851EC3804E00EDA1F8 /* ZLayoutPlaceable.swift in Sources */,
+				8A6B39851EC3804E00EDA1F8 /* ZLayoutAlignable.swift in Sources */,
 				8A6B39811EC33FEF00EDA1F8 /* ZLayoutable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,6 +325,7 @@
 				8AB5F2D41EC4A3CE0053720D /* AnchorFillViewController.swift in Sources */,
 				8AB5F2D21EC49C650053720D /* FillViewController.swift in Sources */,
 				8A6B39721EC33DEE00EDA1F8 /* ViewController.swift in Sources */,
+				8A0C53D01EC63DA0004C4D2F /* AlignViewController.swift in Sources */,
 				8A6B39701EC33DEE00EDA1F8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
