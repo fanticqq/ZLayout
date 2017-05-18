@@ -23,7 +23,7 @@ enum ZLayoutExample: String {
         case .fill:
             return "Fill superview"
         case .anchorsFill:
-            return "Anchors Fill"
+            return "Anchors and alignments filling"
         case .alignment:
             return "Alignment"
         }

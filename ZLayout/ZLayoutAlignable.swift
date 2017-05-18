@@ -73,17 +73,37 @@ extension ZLayoutAlignable {
             height = size
             let layoutWidth: CGFloat
             if let edge = edgeLayout {
-                layoutWidth = edge.minX - layout.maxX
+                layoutWidth = edge.minX - frame.origin.x
             } else {
-                layoutWidth = parentFrame.width - layout.maxX
+                layoutWidth = parentFrame.width - frame.origin.x
             }
-            width = .value(layoutWidth - padding - paddingRight)
+            width = .value(layoutWidth - padding)
             setSize(width: width, height: height)
             alignVertical(gravity, layout: layout)
-        case .bottom:
-            break
-        case .top:
-            break
+        case .bottom(let paddingBottom):
+            frame.origin.y = layout.maxY + paddingBottom
+            width = size
+            let layoutHeight: CGFloat
+            if let edge = edgeLayout {
+                layoutHeight = edge.minY - frame.origin.y
+            } else {
+                layoutHeight = parentFrame.height - frame.origin.y
+            }
+            height = .value(layoutHeight - padding)
+            setSize(width: width, height: height)
+            alignHorizontal(gravity, layout: layout)
+        case .top(let paddingTop):
+            let layoutHeight: CGFloat
+            if let edge = edgeLayout {
+                layoutHeight = layout.minY - edge.maxY
+            } else {
+                layoutHeight = layout.minY
+            }
+            width = size
+            height = .value(layoutHeight - padding - paddingTop)
+            setSize(width: width, height: height)
+            frame.origin.y = layout.minY - frame.height - padding
+            alignHorizontal(gravity, layout: layout)
         case .equalsLeft:
             fatalError("Not implemented yet")
         case .equalsRight:
