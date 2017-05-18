@@ -62,4 +62,25 @@ extension ZLayoutable {
     public var height: CGFloat {
         return frame.height
     }
+
+    internal mutating func setSize(width: ZLayoutSizeParameter?, height: ZLayoutSizeParameter?) {
+        if let width = width {
+            switch width {
+            case .value(let value):
+                frame.size.width = value
+            case .auto:
+                measure()
+                setSize(width: .value(self.width), height: height)
+            }
+        }
+        if let height = height {
+            switch height {
+            case .value(let value):
+                frame.size.height = value
+            case .auto:
+                measure()
+                setSize(width: width, height: .value(self.height))
+            }
+        }
+    }
 }
