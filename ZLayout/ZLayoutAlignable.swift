@@ -61,7 +61,7 @@ extension ZLayoutAlignable {
                 layoutWidth = layout.minX - edge.maxX
                 x = edge.maxX + padding
             } else {
-                layoutWidth = parentFrame.width - layout.minX
+                layoutWidth = layout.minX
                 x = padding
             }
             width = .value(layoutWidth - padding - paddingLeft)

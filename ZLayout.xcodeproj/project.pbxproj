@@ -26,6 +26,8 @@
 		8AB5F2D41EC4A3CE0053720D /* AnchorFillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB5F2D31EC4A3CE0053720D /* AnchorFillViewController.swift */; };
 		8AB5F2D61EC4FA160053720D /* ZLayoutTestsAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB5F2D51EC4FA160053720D /* ZLayoutTestsAlignment.swift */; };
 		8AB5F2DA1EC505400053720D /* ZLayoutUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB5F2D91EC505400053720D /* ZLayoutUtils.swift */; };
+		8AF83EED1ECF951A00235B02 /* ZLayoutTestsAlignAndFillHorizontal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF83EEC1ECF951A00235B02 /* ZLayoutTestsAlignAndFillHorizontal.swift */; };
+		8AF83EEF1ECF9E9400235B02 /* ZLayoutTestsAlignAndFillVertical.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF83EEE1ECF9E9400235B02 /* ZLayoutTestsAlignAndFillVertical.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,8 @@
 		8AB5F2D31EC4A3CE0053720D /* AnchorFillViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnchorFillViewController.swift; sourceTree = "<group>"; };
 		8AB5F2D51EC4FA160053720D /* ZLayoutTestsAlignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLayoutTestsAlignment.swift; sourceTree = "<group>"; };
 		8AB5F2D91EC505400053720D /* ZLayoutUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLayoutUtils.swift; sourceTree = "<group>"; };
+		8AF83EEC1ECF951A00235B02 /* ZLayoutTestsAlignAndFillHorizontal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLayoutTestsAlignAndFillHorizontal.swift; sourceTree = "<group>"; };
+		8AF83EEE1ECF9E9400235B02 /* ZLayoutTestsAlignAndFillVertical.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLayoutTestsAlignAndFillVertical.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,8 +134,9 @@
 			children = (
 				8AB5F2D51EC4FA160053720D /* ZLayoutTestsAlignment.swift */,
 				8A6B395D1EC336CE00EDA1F8 /* ZLayoutTestsAnchors.swift */,
+				8AF83EEC1ECF951A00235B02 /* ZLayoutTestsAlignAndFillHorizontal.swift */,
 				8A6B395F1EC336CE00EDA1F8 /* Info.plist */,
-				8AB5F2D51EC4FA160053720D /* ZLayoutTestsAlignment.swift */,
+				8AF83EEE1ECF9E9400235B02 /* ZLayoutTestsAlignAndFillVertical.swift */,
 			);
 			path = ZLayoutTests;
 			sourceTree = "<group>";
@@ -313,7 +318,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AB5F2D61EC4FA160053720D /* ZLayoutTestsAlignment.swift in Sources */,
+				8AF83EED1ECF951A00235B02 /* ZLayoutTestsAlignAndFillHorizontal.swift in Sources */,
 				8A6B395E1EC336CE00EDA1F8 /* ZLayoutTestsAnchors.swift in Sources */,
+				8AF83EEF1ECF9E9400235B02 /* ZLayoutTestsAlignAndFillVertical.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

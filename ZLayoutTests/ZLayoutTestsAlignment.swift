@@ -47,31 +47,34 @@ class ZLayoutTestsAlignment: XCTestCase {
         childView.removeFromSuperview()
     }
 
-    //MARK: Placing
-
+    //MARK: Alignment
     func testCenterAlignment() {
         childView.alignToCenter(ofLayout: parentView)
         XCTAssert(childView.centerX == parentView.centerX)
         XCTAssert(childView.centerY == parentView.centerY)
     }
 
-    func testLeftPlacing() {
-        rootView.addSubview(childView)
-        XCTAssert(childView.minX == parentView.minX)
-    }
-
-    func testRightPlacing() {
-        rootView.addSubview(childView)
-        XCTAssert(childView.maxX == parentView.maxX)
-    }
-
-    func testBottomPlacing() {
-        rootView.addSubview(childView)
-        XCTAssert(childView.maxY == parentView.maxY)
-    }
-
-    func testTopPlacing() {
-        rootView.addSubview(childView)
+    func testHorizontalAlignmentAndVerticalGravity() {
+        childView.align(to: .zeroLeft, ofLayout: parentView, gravity: .zeroCenter, width: .auto, height: .auto)
+        XCTAssert(childView.maxX == parentView.minX)
+        XCTAssert(childView.centerY == parentView.centerY)
+        childView.align(to: .zeroLeft, ofLayout: parentView, gravity: .zeroTop, width: .auto, height: .auto)
         XCTAssert(childView.minY == parentView.minY)
+        childView.align(to: .zeroLeft, ofLayout: parentView, gravity: .zeroBottom, width: .auto, height: .auto)
+        XCTAssert(childView.maxY == parentView.maxY)
+        childView.align(to: .zeroRight, ofLayout: parentView, gravity: .zeroCenter, width: .auto, height: .auto)
+        XCTAssert(childView.minX == parentView.maxX)
+    }
+
+    func testVerticalAlignmentAndHorizontalGravity() {
+        childView.align(to: .zeroTop, ofLayout: parentView, gravity: .zeroCenter, width: .auto, height: .auto)
+        XCTAssert(childView.maxY == parentView.minY)
+        XCTAssert(childView.centerX == parentView.centerX)
+        childView.align(to: .zeroTop, ofLayout: parentView, gravity: .zeroLeft, width: .auto, height: .auto)
+        XCTAssert(childView.minX == parentView.minX)
+    childView.align(to: .zeroTop, ofLayout: parentView, gravity: .zeroRight, width: .auto, height: .auto)
+        XCTAssert(childView.maxX == parentView.maxX)
+    childView.align(to: .zeroBottom, ofLayout: parentView, gravity: .zeroCenter, width: .auto, height: .auto)
+        XCTAssert(childView.minY == parentView.maxY)
     }
 }
