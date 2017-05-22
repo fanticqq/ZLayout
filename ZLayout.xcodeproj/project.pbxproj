@@ -96,7 +96,7 @@
 		8A6B39451EC336CE00EDA1F8 = {
 			isa = PBXGroup;
 			children = (
-				8A6B39511EC336CE00EDA1F8 /* ZLayout */,
+				8A6B39511EC336CE00EDA1F8 /* Source */,
 				8A6B395C1EC336CE00EDA1F8 /* ZLayoutTests */,
 				8A6B396E1EC33DEE00EDA1F8 /* Demo */,
 				8A6B39501EC336CE00EDA1F8 /* Products */,
@@ -113,7 +113,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8A6B39511EC336CE00EDA1F8 /* ZLayout */ = {
+		8A6B39511EC336CE00EDA1F8 /* Source */ = {
 			isa = PBXGroup;
 			children = (
 				8A6B39521EC336CE00EDA1F8 /* ZLayout.h */,
@@ -124,7 +124,7 @@
 				8A6B39881EC39F1500EDA1F8 /* ZLayoutAnchorable.swift */,
 				8AB5F2D91EC505400053720D /* ZLayout.swift */,
 			);
-			path = ZLayout;
+			path = Source;
 			sourceTree = "<group>";
 		};
 		8A6B395C1EC336CE00EDA1F8 /* ZLayoutTests */ = {
@@ -474,7 +474,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = ZLayout/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -497,7 +497,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = ZLayout/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

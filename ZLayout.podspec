@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/fanticqq/ZLayout.git", :tag => "#{s.version}" }
 
-  s.source_files  = "ZLayout/*.swift"
+  s.source_files  = "Source/*.swift"
 
   s.requires_arc = true
 
