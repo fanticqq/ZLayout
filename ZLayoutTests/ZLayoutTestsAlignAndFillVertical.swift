@@ -53,25 +53,25 @@ class ZLayoutTestsAlignAndFillVertical: XCTestCase {
     }
     
     func testAlignAndFillTop() {
-        alignmentView.alignAndFill(to: .zeroTop, ofLayout: view2, gravity: .zeroCenter, toLayout: view1)
+        alignmentView.alignAndFill(on: .top, relativeTo: view2, withGravity: .center, stretchTo: view1)
         XCTAssert(alignmentView.minY == view1.maxY)
         XCTAssert(alignmentView.maxY == view2.minY)
     }
     
     func testAlignAndFillBottom() {
-        alignmentView.alignAndFill(to: .zeroBottom, ofLayout: view1, gravity: .zeroCenter, toLayout: view2)
+        alignmentView.alignAndFill(on: .bottom, relativeTo: view1, withGravity: .center, stretchTo: view2)
         XCTAssert(alignmentView.minY == view1.maxY)
         XCTAssert(alignmentView.maxY == view2.minY)
     }
     
     func testAlignAndFillTopToSuperview() {
-        alignmentView.alignAndFill(to: .zeroTop, ofLayout: view2, gravity: .zeroCenter)
+        alignmentView.alignAndFill(on: .top, relativeTo: view2, withGravity: .center)
         XCTAssert(alignmentView.minY == 0)
         XCTAssert(alignmentView.maxY == view2.minY)
     }
     
     func testAlignAndFillBottomToSuperview() {
-        alignmentView.alignAndFill(to: .zeroBottom, ofLayout: view1, gravity: .zeroCenter)
+        alignmentView.alignAndFill(on: .bottom, relativeTo: view1, withGravity: .center)
         XCTAssert(alignmentView.minY == view1.maxY)
         XCTAssert(alignmentView.maxY == rootView.maxY)
     }

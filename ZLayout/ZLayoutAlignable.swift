@@ -13,62 +13,54 @@ public protocol ZLayoutAlignable: ZLayoutable {
 
 extension ZLayoutAlignable {
 
-    public mutating func align(to alignment: ZLayoutAlignment,
-                               ofLayout layout: ZLayoutable,
-                               gravity: ZLayoutGravity,
+    public mutating func align(on alignment: ZLayoutAlignment,
+                               relativeTo layout: ZLayoutable,
+                               withGravity gravity: ZLayoutGravity,
                                width: ZLayoutSizeParameter? = nil,
                                height: ZLayoutSizeParameter? = nil) {
         setSize(width: width, height: height)
         switch alignment {
-        case .left(let padding):
+        case .leftOffset(let padding):
             frame.origin.x = layout.minX - frame.width - padding
             alignVertical(gravity, layout: layout)
-        case .right(let padding):
+        case .rightOffset(let padding):
             frame.origin.x = layout.maxX + padding
             alignVertical(gravity, layout: layout)
-        case .top(let padding):
+        case .topOffset(let padding):
             frame.origin.y = layout.minY - frame.height - padding
             alignHorizontal(gravity, layout: layout)
-        case .bottom(let padding):
+        case .bottomOffset(let padding):
             frame.origin.y = layout.maxY + padding
             alignHorizontal(gravity, layout: layout)
-        case .equalsLeft:
-            fatalError("Not implemented yet")
-        case .equalsRight:
-            fatalError("Not implemented yet")
-        case .equalsTop:
-            fatalError("Not implemented yet")
-        case .equalsBottom:
-            fatalError("Not implemented yet")
         }
     }
     
-    public mutating func alignAndFill(to alignment: ZLayoutAlignment,
-                                      ofLayout layout: ZLayoutable,
-                                      gravity: ZLayoutGravity,
-                                      padding: CGFloat = 0,
-                                      toLayout edgeLayout: ZLayoutable? = nil,
+    public mutating func alignAndFill(on alignment: ZLayoutAlignment,
+                                      relativeTo layout: ZLayoutable,
+                                      withGravity gravity: ZLayoutGravity,
+                                      stretchTo edgeLayout: ZLayoutable? = nil,
+                                      trailingPadding: CGFloat = 0,
                                       size: ZLayoutSizeParameter? = nil) {
         var width: ZLayoutSizeParameter? = nil
         var height: ZLayoutSizeParameter? = nil
         
         switch alignment {
-        case .left(let paddingLeft):
+        case .leftOffset(let paddingLeft):
             height = size
             let layoutWidth: CGFloat
             let x: CGFloat
             if let edge = edgeLayout {
                 layoutWidth = layout.minX - edge.maxX
-                x = edge.maxX + padding
+                x = edge.maxX + trailingPadding
             } else {
                 layoutWidth = layout.minX
-                x = padding
+                x = trailingPadding
             }
-            width = .value(layoutWidth - padding - paddingLeft)
+            width = .value(layoutWidth - trailingPadding - paddingLeft)
             setSize(width: width, height: height)
             frame.origin.x = x
             alignVertical(gravity, layout: layout)
-        case .right(let paddingRight):
+        case .rightOffset(let paddingRight):
             frame.origin.x = layout.maxX + paddingRight
             height = size
             let layoutWidth: CGFloat
@@ -77,10 +69,10 @@ extension ZLayoutAlignable {
             } else {
                 layoutWidth = parentFrame.width - frame.origin.x
             }
-            width = .value(layoutWidth - padding)
+            width = .value(layoutWidth - trailingPadding)
             setSize(width: width, height: height)
             alignVertical(gravity, layout: layout)
-        case .bottom(let paddingBottom):
+        case .bottomOffset(let paddingBottom):
             frame.origin.y = layout.maxY + paddingBottom
             width = size
             let layoutHeight: CGFloat
@@ -89,10 +81,10 @@ extension ZLayoutAlignable {
             } else {
                 layoutHeight = parentFrame.height - frame.origin.y
             }
-            height = .value(layoutHeight - padding)
+            height = .value(layoutHeight - trailingPadding)
             setSize(width: width, height: height)
             alignHorizontal(gravity, layout: layout)
-        case .top(let paddingTop):
+        case .topOffset(let paddingTop):
             let layoutHeight: CGFloat
             if let edge = edgeLayout {
                 layoutHeight = layout.minY - edge.maxY
@@ -100,22 +92,14 @@ extension ZLayoutAlignable {
                 layoutHeight = layout.minY
             }
             width = size
-            height = .value(layoutHeight - padding - paddingTop)
+            height = .value(layoutHeight - trailingPadding - paddingTop)
             setSize(width: width, height: height)
-            frame.origin.y = layout.minY - frame.height - padding
+            frame.origin.y = layout.minY - frame.height - trailingPadding
             alignHorizontal(gravity, layout: layout)
-        case .equalsLeft:
-            fatalError("Not implemented yet")
-        case .equalsRight:
-            fatalError("Not implemented yet")
-        case .equalsTop:
-            fatalError("Not implemented yet")
-        case .equalsBottom:
-            fatalError("Not implemented yet")
         }
     }
 
-    public mutating func alignToCenter(ofLayout layout: ZLayoutable, offset: CGPoint = CGPoint.zero) {
+    public mutating func alignToCenter(of layout: ZLayoutable, offset: CGPoint = CGPoint.zero) {
         let targetX: CGFloat = layout.centerX - width / 2 + offset.x
         let targetY: CGFloat = layout.centerY - height / 2 + offset.y
         self.frame.origin = CGPoint(x: targetX, y: targetY)
@@ -126,11 +110,11 @@ private extension ZLayoutAlignable {
 
     mutating func alignVertical(_ gravity: ZLayoutGravity, layout: ZLayoutable) {
         switch gravity {
-        case .top(let padding):
+        case .topOffset(let padding):
             frame.origin.y = layout.minY + padding
-        case .bottom(let padding):
+        case .bottomOffset(let padding):
             frame.origin.y = layout.maxY - frame.height - padding
-        case .center(let padding):
+        case .centerOffset(let padding):
             frame.origin.y = layout.centerY - frame.height / 2 + padding
         default:
             fatalError("Unexpected kind of gravity. You should use ZLayoutGravityTop, ZLayoutGravityBottom or ZLayoutGravityCenter")
@@ -139,11 +123,11 @@ private extension ZLayoutAlignable {
 
     mutating func alignHorizontal(_ gravity: ZLayoutGravity, layout: ZLayoutable) {
         switch gravity {
-        case .left(let padding):
+        case .leftOffset(let padding):
             frame.origin.x = layout.minX + padding
-        case .right(let padding):
+        case .rightOffset(let padding):
             frame.origin.x = layout.maxX - frame.width - padding
-        case .center(let padding):
+        case .centerOffset(let padding):
             frame.origin.x = layout.centerX - frame.width / 2 + padding
         default:
             fatalError("Unexpected kind of gravity. You should use ZLayoutGravityTop, ZLayoutGravityBottom or ZLayoutGravityCenter")

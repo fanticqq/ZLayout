@@ -10,18 +10,15 @@ import UIKit
 
 enum ZLayoutExample: String {
     case anchors = "anchors"
-    case fill = "fill"
     case anchorsFill = "anchors_fill"
     case alignment = "alignment"
 
-    static let allValues: [ZLayoutExample] = [.anchors, .fill, .anchorsFill, .alignment]
+    static let allValues: [ZLayoutExample] = [.anchors, .alignment, .anchorsFill]
     
     var text: String {
         switch self {
         case .anchors:
             return "Anchors"
-        case .fill:
-            return "Fill superview"
         case .anchorsFill:
             return "Anchors and alignments filling"
         case .alignment:

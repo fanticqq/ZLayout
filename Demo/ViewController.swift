@@ -52,10 +52,10 @@ class AnchorsViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        leftView.anchorToParent(edge: .left(padding: 20), gravity: .zeroCenter, width: 50, height: 50)
-        rightView.anchorToParent(edge: .right(padding: 20), gravity: .zeroCenter, width: 80, height: 80)
-        topView.anchorToParent(edge: .top(padding: 50), gravity: .zeroCenter, width: 110, height: 110)
-        bottomView.anchorToParent(edge: .bottom(padding: 20), gravity: .zeroCenter, width: 90, height: 90)
+        leftView.anchorToParent(edge: .leftOffset(20), gravity: .center, width: 50, height: 50)
+        rightView.anchorToParent(edge: .rightOffset(20), gravity: .center, width: 80, height: 80)
+        topView.anchorToParent(edge: .topOffset(50), gravity: .center, width: 110, height: 110)
+        bottomView.anchorToParent(edge: .bottomOffset(20), gravity: .center, width: 90, height: 90)
         centerView.anchorToCenterInParent(width: .auto, height: .auto)
     }
 }

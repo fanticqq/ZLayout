@@ -114,68 +114,68 @@ class AlignViewController: UIViewController {
         super.viewDidLayoutSubviews()
         centerView.anchorToCenterInParent(width: 100, height: 100)
 
-        leftTopView.align(to: .left(padding: 20),
-                          ofLayout: centerView,
-                          gravity: .zeroTop,
+        leftTopView.align(on: .leftOffset(20),
+                          relativeTo: centerView,
+                          withGravity: .top,
                           width: 80,
                           height: 30)
-        leftCenterView.align(to: .left(padding: 20),
-                             ofLayout: centerView,
-                             gravity: .zeroCenter,
+        leftCenterView.align(on: .leftOffset(20),
+                             relativeTo: centerView,
+                             withGravity: .center,
                              width: 80,
                              height: 30)
-        leftBottomView.align(to: .left(padding: 20),
-                             ofLayout: centerView,
-                             gravity: .zeroBottom,
+        leftBottomView.align(on: .leftOffset(20),
+                             relativeTo: centerView,
+                             withGravity: .bottom,
                              width: 80,
                              height: 30)
 
-        rightTopView.align(to: .right(padding: 20),
-                           ofLayout: centerView,
-                           gravity: .zeroTop,
+        rightTopView.align(on: .rightOffset(20),
+                           relativeTo: centerView,
+                           withGravity: .top,
                            width: 80,
                            height: 30)
-        rightCenterView.align(to: .right(padding: 20),
-                              ofLayout: centerView,
-                              gravity: .zeroCenter,
+        rightCenterView.align(on: .rightOffset(20),
+                              relativeTo: centerView,
+                              withGravity: .center,
                               width: 80,
                               height: 30)
-        rightBottomView.align(to: .right(padding: 20),
-                              ofLayout: centerView,
-                              gravity: .zeroBottom,
+        rightBottomView.align(on: .rightOffset(20),
+                              relativeTo: centerView,
+                              withGravity: .bottom,
                               width: 80,
                               height: 30)
         
-        topLeftView.align(to: .top(padding: 20),
-                           ofLayout: centerView,
-                           gravity: .zeroLeft,
-                           width: 30,
-                           height: 80)
-        topRightView.align(to: .top(padding: 20),
-                              ofLayout: centerView,
-                              gravity: .zeroRight,
-                              width: 30,
-                              height: 80)
-        topCenterView.align(to: .top(padding: 20),
-                              ofLayout: centerView,
-                              gravity: .zeroCenter,
-                              width: 30,
-                              height: 80)
-        
-        bottomLeftView.align(to: .bottom(padding: 20),
-                          ofLayout: centerView,
-                          gravity: .zeroLeft,
+        topLeftView.align(on: .topOffset(20),
+                          relativeTo: centerView,
+                          withGravity: .left,
                           width: 30,
                           height: 80)
-        bottomRightView.align(to: .bottom(padding: 20),
-                           ofLayout: centerView,
-                           gravity: .zeroRight,
+        topRightView.align(on: .topOffset(20),
+                           relativeTo: centerView,
+                           withGravity: .right,
                            width: 30,
                            height: 80)
-        bottomCenterView.align(to: .bottom(padding: 20),
-                            ofLayout: centerView,
-                            gravity: .zeroCenter,
+        topCenterView.align(on: .topOffset(20),
+                            relativeTo: centerView,
+                            withGravity: .center,
                             width: 30,
                             height: 80)
+        
+        bottomLeftView.align(on: .bottomOffset(20),
+                             relativeTo: centerView,
+                             withGravity: .left,
+                             width: 30,
+                             height: 80)
+        bottomRightView.align(on: .bottomOffset(20),
+                              relativeTo: centerView,
+                              withGravity: .right,
+                              width: 30,
+                              height: 80)
+        bottomCenterView.align(on: .bottomOffset(20),
+                               relativeTo: centerView,
+                               withGravity: .center,
+                               width: 30,
+                               height: 80)
     }
 }

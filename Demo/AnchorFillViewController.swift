@@ -39,13 +39,13 @@ class AnchorFillViewController: UIViewController {
         view.backgroundColor = UIColor.cyan
         return view
     }()
-
+    
     lazy var rightAlignView: UIView = {
         let view = UIView()
         view.backgroundColor = UIColor.purple
         return view
     }()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addSubview(leftView)
@@ -58,35 +58,35 @@ class AnchorFillViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        leftView.anchorAndFillParent(edge: .zeroLeft,
+        leftView.anchorAndFillParent(edge: .left,
                                      size: 100,
                                      insets: UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10))
-        rightView.anchorAndFillParent(edge: .zeroRight,
+        rightView.anchorAndFillParent(edge: .right,
                                       size: 100,
                                       insets: UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10))
-        rightAlignView.alignAndFill(to: .right(padding: 10),
-                                    ofLayout: leftView,
-                                    gravity: .zeroTop,
-                                    padding: 10,
-                                    toLayout: rightView,
+        rightAlignView.alignAndFill(on: .rightOffset(10),
+                                    relativeTo: leftView,
+                                    withGravity: .top,
+                                    stretchTo: rightView,
+                                    trailingPadding: 10,
                                     size: 100)
-        leftAlignView.alignAndFill(to: .left(padding: 10),
-                                   ofLayout: rightView,
-                                   gravity: .zeroBottom,
-                                   padding: 10,
-                                   toLayout: leftView,
+        leftAlignView.alignAndFill(on: .leftOffset(10),
+                                   relativeTo: rightView,
+                                   withGravity: .bottom,
+                                   stretchTo: leftView,
+                                   trailingPadding: 10,
                                    size: 100)
-        topAlignView.alignAndFill(to: .top(padding: 10),
-                                  ofLayout: leftAlignView,
-                                  gravity: .zeroRight,
-                                  padding: 10,
-                                  toLayout: rightAlignView,
+        topAlignView.alignAndFill(on: .topOffset(10),
+                                  relativeTo: leftAlignView,
+                                  withGravity: .right,
+                                  stretchTo: rightAlignView,
+                                  trailingPadding: 10,
                                   size: .value(rightAlignView.width / 2 - 5))
-        bottomAlignView.alignAndFill(to: .bottom(padding: 10),
-                                     ofLayout: rightAlignView,
-                                     gravity: .zeroLeft,
-                                     padding: 10,
-                                     toLayout: leftAlignView,
+        bottomAlignView.alignAndFill(on: .bottomOffset(10),
+                                     relativeTo: rightAlignView,
+                                     withGravity: .left,
+                                     stretchTo: leftAlignView,
+                                     trailingPadding: 10,
                                      size: .value(rightAlignView.width / 2 - 5))
     }
 }

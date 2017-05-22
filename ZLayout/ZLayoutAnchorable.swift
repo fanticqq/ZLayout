@@ -14,20 +14,20 @@ public protocol ZLayoutAnchorable: ZLayoutable {
 
 extension ZLayoutAnchorable {
     
-    public mutating func anchorAndFillParent(edge: ZLayoutAnchorEdge,
+    public mutating func anchorAndFillParent(edge: ZLayoutAlignment,
                                        size: CGFloat,
                                        insets: UIEdgeInsets = UIEdgeInsets.zero) {
         anchorAndFillSize(edge: edge, size: size, insets: insets)
         frame.origin.x = insets.left
         frame.origin.y = insets.top
         switch edge {
-        case .left:
+        case .leftOffset:
             break
-        case .right:
+        case .rightOffset:
             frame.origin.x = parentFrame.width - self.width - insets.right
-        case .top:
+        case .topOffset:
             break
-        case .bottom:
+        case .bottomOffset:
             frame.origin.y = parentFrame.height - self.height - insets.bottom
         }
     }
@@ -47,22 +47,22 @@ extension ZLayoutAnchorable {
         frame.origin = CGPoint(x: targetX, y: targetY)
     }
     
-    public mutating func anchorToParent(edge: ZLayoutAnchorEdge,
+    public mutating func anchorToParent(edge: ZLayoutAlignment,
                                   gravity: ZLayoutGravity,
                                   width: ZLayoutSizeParameter? = nil,
                                   height: ZLayoutSizeParameter? = nil) {
         setSize(width: width, height: height)
         switch edge {
-        case .left(let padding):
+        case .leftOffset(let padding):
             frame.origin.x = padding
             anchorVertical(gravity)
-        case .right(let padding):
+        case .rightOffset(let padding):
             frame.origin.x = parentFrame.width - self.width - padding
             anchorVertical(gravity)
-        case .top(let padding):
+        case .topOffset(let padding):
             frame.origin.y = padding
             anchorHorizontal(gravity)
-        case .bottom(let padding):
+        case .bottomOffset(let padding):
             frame.origin.y = parentFrame.height - self.height - padding
             anchorHorizontal(gravity)
         }
@@ -71,16 +71,16 @@ extension ZLayoutAnchorable {
 
 private extension ZLayoutAnchorable {
     
-    mutating func anchorAndFillSize(edge: ZLayoutAnchorEdge, size: CGFloat, insets: UIEdgeInsets) {
+    mutating func anchorAndFillSize(edge: ZLayoutAlignment, size: CGFloat, insets: UIEdgeInsets) {
         switch edge {
-        case .left:
+        case .leftOffset:
             fallthrough
-        case .right:
+        case .rightOffset:
             frame.size = CGSize(width: size - insets.left - insets.right,
                                 height: parentFrame.height - insets.top - insets.bottom)
-        case .top:
+        case .topOffset:
             fallthrough
-        case .bottom:
+        case .bottomOffset:
             frame.size = CGSize(width: parentFrame.width - insets.left - insets.right,
                                 height: size - insets.top - insets.bottom)
         }
@@ -88,11 +88,11 @@ private extension ZLayoutAnchorable {
     
     mutating func anchorHorizontal(_ gravity: ZLayoutGravity) {
         switch gravity {
-        case .left(let padding):
+        case .leftOffset(let padding):
             frame.origin.x = padding
-        case .right(let padding):
+        case .rightOffset(let padding):
             frame.origin.x = parentFrame.width - width - padding
-        case .center(let padding):
+        case .centerOffset(let padding):
             frame.origin.x = parentFrame.width / 2 - width / 2 + padding
         default:
             fatalError("Invalid kind of gravity for horizontal anchor")
@@ -101,11 +101,11 @@ private extension ZLayoutAnchorable {
     
     mutating func anchorVertical(_ gravity: ZLayoutGravity) {
         switch gravity {
-        case .top(let padding):
+        case .topOffset(let padding):
             frame.origin.y = padding
-        case .bottom(let padding):
+        case .bottomOffset(let padding):
             frame.origin.y = parentFrame.height - height - padding
-        case .center(let padding):
+        case .centerOffset(let padding):
             frame.origin.y = parentFrame.height / 2 - height / 2 + padding
         default:
             fatalError("Invalid kind of gravity for vertical anchor")
