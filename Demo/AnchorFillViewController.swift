@@ -58,12 +58,8 @@ class AnchorFillViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        leftView.anchorAndFillParent(edge: .left,
-                                     size: 100,
-                                     insets: UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10))
-        rightView.anchorAndFillParent(edge: .right,
-                                      size: 100,
-                                      insets: UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10))
+        leftView.anchor(toParentEdge: .left, width: 100, height: .superView, inset: UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10))
+        rightView.anchor(toParentEdge: .right, width: 100, height: .superView, inset: UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10))
         rightAlignView.alignAndFill(on: .rightOffset(10),
                                     relativeTo: leftView,
                                     withGravity: .top,

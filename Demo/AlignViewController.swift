@@ -112,7 +112,7 @@ class AlignViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        centerView.anchorToCenterInParent(width: 100, height: 100)
+        centerView.anchor(toParentEdge: .centerParent, width: 100, height: 100)
 
         leftTopView.align(on: .leftOffset(20),
                           relativeTo: centerView,

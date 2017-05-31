@@ -117,39 +117,16 @@ class Cell: UICollectionViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        self.headerView.anchorToParent(edge: .top, gravity: .center, width: .superView, height: 60)
-        self.avatarContainerView.anchorToParent(edge: .leftOffset(16), gravity: .center)
-        self.moreOptions.anchorToParent(edge: .rightOffset(16), gravity: .center, width: .auto, height: .auto)
-        self.nameLabel.alignAndFill(on: .rightOffset(16),
-                                    relativeTo: avatarContainerView,
-                                    withGravity: .center,
-                                    stretchTo: moreOptions,
-                                    trailingPadding: 16,
-                                    size: .auto)
+        self.headerView.anchor(toParentEdge: .top, gravity: .center, width: .superView, height: 60)
+        self.avatarContainerView.anchor(toParentEdge: .left, gravity: .center, offset: CGPoint(x: 16, y: 0))
+        self.moreOptions.anchor(toParentEdge: .right, gravity: .center, width: .auto, height: .auto, offset: CGPoint(x: -16, y: 0))
+        self.nameLabel.alignAndFill(on: .rightOffset(16), relativeTo: avatarContainerView, withGravity: .center, stretchTo: moreOptions, trailingPadding: 16, size: .auto)
         let ratio: CGFloat = 5/7
-        self.contentImageView.align(on: .bottom,
-                                    relativeTo: headerView,
-                                    withGravity: .center,
-                                    width: .superView,
-                                    height: .value(self.width * ratio))
-        self.actionsView.align(on: .bottom,
-                               relativeTo: contentImageView,
-                               withGravity: .center,
-                               width: .superView,
-                               height: 60)
-        self.likeImageVIew.anchorToParent(edge: .leftOffset(16),
-                                          gravity: .center,
-                                          width: .auto,
-                                          height: .auto)
-        self.favoritesImageVIew.anchorToParent(edge: .rightOffset(16),
-                                          gravity: .center,
-                                          width: .auto,
-                                          height: .auto)
-        self.commentImageVIew.align(on: .rightOffset(16),
-                                 relativeTo: likeImageVIew,
-                                 withGravity: .center,
-                                 width: .auto,
-                                 height: .auto)
+        self.contentImageView.align(on: .bottom, relativeTo: headerView, withGravity: .center, width: .superView, height: .value(self.width * ratio))
+        self.actionsView.align(on: .bottom, relativeTo: contentImageView, withGravity: .center, width: .superView, height: 60)
+        self.likeImageVIew.anchor(toParentEdge: .left, gravity: .center, width: .auto, height: .auto, offset: CGPoint(x: 16, y: 0))
+        self.favoritesImageVIew.anchor(toParentEdge: .right, gravity: .center, width: .auto, height: .auto, offset: CGPoint(x: -16, y: 0))
+        self.commentImageVIew.align(on: .rightOffset(16), relativeTo: likeImageVIew, withGravity: .center, width: .auto, height: .auto)
         self.viewsCountLabel.align(on: .bottom, relativeTo: actionsView, withGravity: .leftOffset(20), width: .auto, height: .auto)
         self.textLabel.align(on: .bottomOffset(6), relativeTo: viewsCountLabel, withGravity: .left, width: .auto, height: .auto)
     }

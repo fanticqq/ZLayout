@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D16DCA21D4CB67E20C6EC0D /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D16DF6E3681CCD01AF4EE09 /* Helpers.swift */; };
 		8A0C53D01EC63DA0004C4D2F /* AlignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0C53CF1EC63DA0004C4D2F /* AlignViewController.swift */; };
 		8A65FE461EDF3674009728D8 /* InstagramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A65FE451EDF3674009728D8 /* InstagramViewController.swift */; };
 		8A65FE4A1EDF3AF3009728D8 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A65FE491EDF3AF3009728D8 /* Cell.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7D16DF6E3681CCD01AF4EE09 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		8A0C53CF1EC63DA0004C4D2F /* AlignViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlignViewController.swift; sourceTree = "<group>"; };
 		8A65FE451EDF3674009728D8 /* InstagramViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstagramViewController.swift; sourceTree = "<group>"; };
 		8A65FE491EDF3AF3009728D8 /* Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				8A6B39841EC3804E00EDA1F8 /* ZLayoutAlignable.swift */,
 				8A6B39881EC39F1500EDA1F8 /* ZLayoutAnchorable.swift */,
 				8AB5F2D91EC505400053720D /* ZLayout.swift */,
+				7D16DF6E3681CCD01AF4EE09 /* Helpers.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 				8A6B39891EC39F1500EDA1F8 /* ZLayoutAnchorable.swift in Sources */,
 				8A6B39851EC3804E00EDA1F8 /* ZLayoutAlignable.swift in Sources */,
 				8A6B39811EC33FEF00EDA1F8 /* ZLayoutable.swift in Sources */,
+				7D16DCA21D4CB67E20C6EC0D /* Helpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

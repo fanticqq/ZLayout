@@ -14,12 +14,22 @@ public enum ZLayoutGravity {
     case topOffset(CGFloat)
     case bottomOffset(CGFloat)
     case centerOffset(CGFloat)
-    
+
     public static let left: ZLayoutGravity = .leftOffset(0)
     public static let right: ZLayoutGravity = .rightOffset(0)
     public static let top: ZLayoutGravity = .topOffset(0)
     public static let bottom: ZLayoutGravity = .bottomOffset(0)
     public static let center: ZLayoutGravity = .centerOffset(0)
+}
+
+public enum ZLayoutEdge {
+
+    case left
+    case right
+    case top
+    case bottom
+    case centerParent
+    case all
 }
 
 public enum ZLayoutAlignment {
