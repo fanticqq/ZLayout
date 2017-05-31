@@ -38,6 +38,7 @@ public enum ZLayoutSizeParameter: ExpressibleByIntegerLiteral, ExpressibleByFloa
     
     case value(CGFloat)
     case auto
+    case superView
     
     public init(floatLiteral value: Float) {
         self = .value(CGFloat(value))

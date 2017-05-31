@@ -18,3 +18,10 @@ extension UIView: ZLayoutable, ZLayoutAlignable, ZLayoutAnchorable {
         self.sizeToFit()
     }
 }
+
+extension CALayer: ZLayoutable {
+    
+    public var parentFrame: CGRect {
+        return self.superlayer!.frame
+    }
+}

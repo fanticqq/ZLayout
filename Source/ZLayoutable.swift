@@ -28,6 +28,11 @@ public protocol ZLayoutable {
 
 extension ZLayoutable {
     
+    public func measure() {}
+}
+
+extension ZLayoutable {
+    
     public var minX: CGFloat {
         return frame.origin.x
     }
@@ -71,6 +76,8 @@ extension ZLayoutable {
             case .auto:
                 measure()
                 setSize(width: .value(self.width), height: height)
+            case .superView:
+                frame.size.width = parentFrame.width
             }
         }
         if let height = height {
@@ -80,6 +87,8 @@ extension ZLayoutable {
             case .auto:
                 measure()
                 setSize(width: width, height: .value(self.height))
+            case .superView:
+                frame.size.height = parentFrame.height
             }
         }
     }

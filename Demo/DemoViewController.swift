@@ -12,8 +12,9 @@ enum ZLayoutExample: String {
     case anchors = "anchors"
     case anchorsFill = "anchors_fill"
     case alignment = "alignment"
+    case instagram = "instagram"
 
-    static let allValues: [ZLayoutExample] = [.anchors, .alignment, .anchorsFill]
+    static let allValues: [ZLayoutExample] = [.anchors, .alignment, .anchorsFill, .instagram]
     
     var text: String {
         switch self {
@@ -23,6 +24,8 @@ enum ZLayoutExample: String {
             return "Anchors and alignments filling"
         case .alignment:
             return "Alignment"
+        case .instagram:
+            return "What about complex example?"
         }
     }
 }
