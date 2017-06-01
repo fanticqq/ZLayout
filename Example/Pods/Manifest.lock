@@ -1,0 +1,16 @@
+PODS:
+  - ZLayout (0.1.0)
+
+DEPENDENCIES:
+  - ZLayout (from `../`)
+
+EXTERNAL SOURCES:
+  ZLayout:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ZLayout: 91fc94278e156d887e23950d84cc69eb55a117c7
+
+PODFILE CHECKSUM: 2305d38104e49ceb4e14352b0fd6f5cf71272529
+
+COCOAPODS: 1.2.1

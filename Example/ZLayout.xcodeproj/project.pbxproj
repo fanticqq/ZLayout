@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
-		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
-		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
-		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
-		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		8A3997E41EE092BB005404B5 /* AlignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3997DD1EE092BB005404B5 /* AlignViewController.swift */; };
+		8A3997E51EE092BB005404B5 /* AnchorFillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3997DE1EE092BB005404B5 /* AnchorFillViewController.swift */; };
+		8A3997E61EE092BB005404B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3997DF1EE092BB005404B5 /* AppDelegate.swift */; };
+		8A3997E71EE092BB005404B5 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3997E01EE092BB005404B5 /* Cell.swift */; };
+		8A3997E81EE092BB005404B5 /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3997E11EE092BB005404B5 /* DemoViewController.swift */; };
+		8A3997E91EE092BB005404B5 /* InstagramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3997E21EE092BB005404B5 /* InstagramViewController.swift */; };
+		8A3997EA1EE092BB005404B5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3997E31EE092BB005404B5 /* ViewController.swift */; };
+		8A3997ED1EE0930F005404B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A3997EB1EE0930F005404B5 /* Main.storyboard */; };
+		8A3997EF1EE09455005404B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A3997EE1EE09455005404B5 /* Assets.xcassets */; };
 		C5CD98CAEF987841A2300822 /* Pods_ZLayout_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C40221F401F08C5D1C3940E /* Pods_ZLayout_Example.framework */; };
 		D85B6FEA836F766133859720 /* Pods_ZLayout_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4CE4A1596A335118DB75756 /* Pods_ZLayout_Tests.framework */; };
 /* End PBXBuildFile section */
@@ -28,23 +32,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0BFFF0664A65431844D0C88B /* ZLayout.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = ZLayout.podspec; path = ../ZLayout.podspec; sourceTree = "<group>"; };
+		0BFFF0664A65431844D0C88B /* ZLayout.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ZLayout.podspec; path = ../ZLayout.podspec; sourceTree = "<group>"; };
 		16E0976F8C9536BA1F4F4326 /* Pods-ZLayout_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZLayout_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZLayout_Example/Pods-ZLayout_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* ZLayout_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZLayout_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* ZLayout_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZLayout_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		6554265869BB8A3A1B441538 /* Pods-ZLayout_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZLayout_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZLayout_Tests/Pods-ZLayout_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		777B0658E3D1CB83FC6C0BB2 /* Pods-ZLayout_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZLayout_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZLayout_Tests/Pods-ZLayout_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		8512B312948900B4032ABB4E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		8512B312948900B4032ABB4E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		8A3997DD1EE092BB005404B5 /* AlignViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlignViewController.swift; sourceTree = "<group>"; };
+		8A3997DE1EE092BB005404B5 /* AnchorFillViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnchorFillViewController.swift; sourceTree = "<group>"; };
+		8A3997DF1EE092BB005404B5 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8A3997E01EE092BB005404B5 /* Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		8A3997E11EE092BB005404B5 /* DemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoViewController.swift; sourceTree = "<group>"; };
+		8A3997E21EE092BB005404B5 /* InstagramViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstagramViewController.swift; sourceTree = "<group>"; };
+		8A3997E31EE092BB005404B5 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8A3997EC1EE0930F005404B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8A3997EE1EE09455005404B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C40221F401F08C5D1C3940E /* Pods_ZLayout_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZLayout_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BA0D35BC4D15DC5E4321F545 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		BA0D35BC4D15DC5E4321F545 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		E4CE4A1596A335118DB75756 /* Pods_ZLayout_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZLayout_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB612158A5E859EB1E4689CA /* Pods-ZLayout_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZLayout_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZLayout_Example/Pods-ZLayout_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,7 +101,6 @@
 			children = (
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for ZLayout */,
-				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
 				59AFCC163BEB2B47073132D6 /* Pods */,
 				266D564A0DA790C46698BE74 /* Frameworks */,
@@ -113,10 +119,15 @@
 		607FACD21AFB9204008FA782 /* Example for ZLayout */ = {
 			isa = PBXGroup;
 			children = (
-				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
-				607FACD91AFB9204008FA782 /* Main.storyboard */,
-				607FACDC1AFB9204008FA782 /* Images.xcassets */,
+				8A3997EE1EE09455005404B5 /* Assets.xcassets */,
+				8A3997EB1EE0930F005404B5 /* Main.storyboard */,
+				8A3997DD1EE092BB005404B5 /* AlignViewController.swift */,
+				8A3997DE1EE092BB005404B5 /* AnchorFillViewController.swift */,
+				8A3997DF1EE092BB005404B5 /* AppDelegate.swift */,
+				8A3997E01EE092BB005404B5 /* Cell.swift */,
+				8A3997E11EE092BB005404B5 /* DemoViewController.swift */,
+				8A3997E21EE092BB005404B5 /* InstagramViewController.swift */,
+				8A3997E31EE092BB005404B5 /* ViewController.swift */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
@@ -128,23 +139,6 @@
 			isa = PBXGroup;
 			children = (
 				607FACD41AFB9204008FA782 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		607FACE81AFB9204008FA782 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				607FACEB1AFB9204008FA782 /* Tests.swift */,
-				607FACE91AFB9204008FA782 /* Supporting Files */,
-			);
-			path = Tests;
-			sourceTree = "<group>";
-		};
-		607FACE91AFB9204008FA782 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				607FACEA1AFB9204008FA782 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -215,7 +209,8 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 0820;
+						DevelopmentTeam = 86ES72U35G;
+						LastSwiftMigration = 0830;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -248,9 +243,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
-				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				8A3997EF1EE09455005404B5 /* Assets.xcassets in Resources */,
+				8A3997ED1EE0930F005404B5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,8 +356,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
-				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				8A3997E61EE092BB005404B5 /* AppDelegate.swift in Sources */,
+				8A3997E71EE092BB005404B5 /* Cell.swift in Sources */,
+				8A3997E51EE092BB005404B5 /* AnchorFillViewController.swift in Sources */,
+				8A3997E91EE092BB005404B5 /* InstagramViewController.swift in Sources */,
+				8A3997EA1EE092BB005404B5 /* ViewController.swift in Sources */,
+				8A3997E41EE092BB005404B5 /* AlignViewController.swift in Sources */,
+				8A3997E81EE092BB005404B5 /* DemoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,7 +370,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,20 +384,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		607FACD91AFB9204008FA782 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				607FACDA1AFB9204008FA782 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		607FACDE1AFB9204008FA782 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				607FACDF1AFB9204008FA782 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		8A3997EB1EE0930F005404B5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8A3997EC1EE0930F005404B5 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -496,11 +495,14 @@
 			baseConfigurationReference = 16E0976F8C9536BA1F4F4326 /* Pods-ZLayout_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 86ES72U35G;
 				INFOPLIST_FILE = ZLayout/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -510,6 +512,8 @@
 			baseConfigurationReference = EB612158A5E859EB1E4689CA /* Pods-ZLayout_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 86ES72U35G;
 				INFOPLIST_FILE = ZLayout/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -523,6 +527,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6554265869BB8A3A1B441538 /* Pods-ZLayout_Tests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -543,6 +548,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 777B0658E3D1CB83FC6C0BB2 /* Pods-ZLayout_Tests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
