@@ -19,7 +19,9 @@ use_frameworks!
 pod "ZLayout"
 ```
 ##Example
+
 ![Catogram interface](Screenshots/Catogram.png)
+
 Let's replicate Instagram feed UI, but with more dose of cats.
 After all setups of subviews this is what we should do for layout our views.
 ```swift
@@ -45,12 +47,16 @@ To place a view relative to the parent you can use anchoring. The most simple ex
 ```swift
 view1.anchor(toParentEdge: .centerParent, width: 50, height: 50)
 ```
+
 ![anchorCenter Example](Screenshots/anchorCenter.png)
+
 To fill superview you can use specific case of ZLayoutEdge named ```.all```. In this case width and height parameters will be ignored.
 ```swift
 view1.anchor(toParentEdge: .all, inset: UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5))
 ```
+
 ![superView Example](Screenshots/superView.png)
+
 You can do the same via ```.superView``` value for width and height.
 ```swift
 centerView1.anchor(toParentEdge: .centerParent, width: .superView, height: .superView, inset: UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5))
@@ -81,7 +87,8 @@ view10.align(on: .bottomOffset(20), relativeTo: centerView, withGravity: .left, 
 view11.align(on: .bottomOffset(20), relativeTo: centerView, withGravity: .right, width: 30, height: 80)
 view12.align(on: .bottomOffset(20), relativeTo: centerView, withGravity: .center, width: 30, height: 80)
 ```
-![superView Example](Screenshots/Alignment.png)
+
+![Alignment Example](Screenshots/Alignment.png)
 
 Also you can stretch view to another after alignment via ```alignAndFill``` method
 ```swift
@@ -90,7 +97,9 @@ view2.anchor(toParentEdge: .bottom, width: .superView, height: 20)
 view3.alignAndFill(on: .bottomOffset(5), relativeTo: topView, withGravity: .center, stretchTo: bottomView, trailingPadding: 5, size: 20)
 ```
 Here size means width or height, it depends on alignment type.
-![superView Example](Screenshots/AlignAndFill.png)
+
+![Alignment Example](Screenshots/AlignAndFill.png)
+
 ## License
 
 ZLayout is available under the MIT license. See the LICENSE file for more info.

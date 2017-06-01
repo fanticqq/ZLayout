@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ZLayout'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = 'A lightweight framework for layout views'
 
 # This description is used to generate tags and improve search results.
