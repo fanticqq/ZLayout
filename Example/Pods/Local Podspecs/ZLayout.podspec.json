@@ -1,6 +1,6 @@
 {
   "name": "ZLayout",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "summary": "A lightweight framework for layout views",
   "homepage": "https://github.com/fanticqq/ZLayout",
   "license": {
@@ -12,7 +12,7 @@
   },
   "source": {
     "git": "https://github.com/fanticqq/ZLayout.git",
-    "tag": "0.1.0"
+    "tag": "0.2.0"
   },
   "platforms": {
     "ios": "8.0"

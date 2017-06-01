@@ -1,16 +1,21 @@
 PODS:
-  - ZLayout (0.1.0)
+  - ZLayout (0.2.0)
 
 DEPENDENCIES:
-  - ZLayout (from `../`)
+  - ZLayout (from `https://github.com/fanticqq/ZLayout.git`)
 
 EXTERNAL SOURCES:
   ZLayout:
-    :path: "../"
+    :git: https://github.com/fanticqq/ZLayout.git
+
+CHECKOUT OPTIONS:
+  ZLayout:
+    :commit: f19c487d6e05b2d4b63c9b617f1328ae61033823
+    :git: https://github.com/fanticqq/ZLayout.git
 
 SPEC CHECKSUMS:
-  ZLayout: 91fc94278e156d887e23950d84cc69eb55a117c7
+  ZLayout: fe422e925b334ba7df3fe9daa4e072b3b9179b38
 
-PODFILE CHECKSUM: 2305d38104e49ceb4e14352b0fd6f5cf71272529
+PODFILE CHECKSUM: 7f2bed80f74997479a818ff9546cb08f64da6219
 
 COCOAPODS: 1.2.1
