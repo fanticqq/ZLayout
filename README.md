@@ -2,7 +2,7 @@
 
 [![CI Status](http://img.shields.io/travis/fanticqq/ZLayout.svg?style=flat)](https://travis-ci.org/fanticqq/ZLayout)
 [![Version](https://img.shields.io/cocoapods/v/ZLayout.svg?style=flat)](http://cocoapods.org/pods/ZLayout)
-### A lightweight framework for layout views with Swift.
+### A lightweight library for layout views with Swift.
 
 ## Example
 

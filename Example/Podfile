@@ -1,7 +1,7 @@
 use_frameworks!
 
 target 'ZLayout_Example' do
-  pod 'ZLayout', :git => 'https://github.com/fanticqq/ZLayout.git'
+  pod 'ZLayout'
 
   target 'ZLayout_Tests' do
     inherit! :search_paths
