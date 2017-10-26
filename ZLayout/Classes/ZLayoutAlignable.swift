@@ -104,11 +104,9 @@ extension ZLayoutAlignable {
                               height: ZLayoutSizeParameter? = nil,
                               offset: CGPoint = CGPoint.zero) {
         setSize(width: width, height: height)
-        print("frame = \(frame)")
         let targetX: CGFloat = layout.centerX - self.width / 2 + offset.x
         let targetY: CGFloat = layout.centerY - self.height / 2 + offset.y
         self.frame.origin = CGPoint(x: targetX, y: targetY)
-        print("frame = \(frame)")
     }
 }
 
